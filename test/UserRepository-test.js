@@ -33,4 +33,16 @@ describe('User Repository', () => {
       });
 
     })
+
+    describe('findAvgStepGoal()', () => {
+
+      it('should be a function', () => {
+        expect(userRepo.findAvgStepGoal).to.be.a('function');
+      });
+
+      it('should return a number that is the average step goal of all users', () => {
+        expect(userRepo.findAvgStepGoal()).to.equal(6667)
+      });
+
+    })
 });
