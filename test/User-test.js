@@ -55,4 +55,17 @@ describe('User', () => {
 
   });
 
+  describe('findFirstName()', () => {
+
+    it('should be a function', () => {
+      expect(user1.findFirstName).to.be.a('function');
+    });
+
+    it('should return the first name of a user', () => {
+      expect(user1.findFirstName()).to.equal('Jarvis');
+      expect(user2.findFirstName()).to.equal('Herminia');
+    })
+
+  })
+
 });
