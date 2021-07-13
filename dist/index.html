@@ -1,14 +1,141 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Activity Tracker</title>
-  </head>
-  <body>
-    <h1>Activity Tracker</h1>
-    <img src="./images/turing-logo.png" alt="turing logo" height="100px" width="100px">
 
-<!-- Do not include the scripts.js file here - it is done automatically by the webpack server -->
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../src/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap" rel="stylesheet">
+    <title>Activity Tracker</title>
+</head>
+
+<body>
+    <aside class="left-container">
+        <img src=" " alt="step icon">
+        <h2>Steps</h2>
+        <img src=" " alt="hyration icon">
+        <h2>Hydration</h2>
+        <img src=" " alt="sleep icon">
+        <h2>Sleep</h2>
+    </aside>
+    <section class="center-container">
+        <div class="center-top-container">
+            <h1 id="welcomeMessage">Welcome, Kevin!</h1>
+            <section class="step-card">
+                <img src=" " alt="step icon">
+                <div class="step-announcements">
+                    <h3>Daily Step Goal</h3>
+                    <p class=" steps-data" id=" userStepGoal ">10,000</p>
+                    <h3>Avg Friends Step Goal</h3>
+                    <p class="steps-data" id="friendsStepGoal ">11,300</p>
+                    <h3>Stride Length</h3>
+                    <p class="steps-data" id="strideLength ">3.7</p>
+                </div>
+            </section>
+            <section class="hydration-card">
+                <img src=" " alt="hyration icon">
+                <h3>Ounces Drank Today</h3>
+                <p class="hyration-data" id="ouncesDrank ">65</p>
+
+                <!-- potentially replace innerHTml of div -->
+                <div>
+                    <h6>Mon<span> 64oz</span></h6>
+                    <h6>Tue<span> 79oz</span></h6>
+                    <h6>Wed<span> 90oz</span></h6>
+                    <h6>Thu<span> 58oz</span></h6>
+                    <h6>Fri<span> 87oz</span></h6>
+                    <h6>Sat<span> 78oz</span></h6>
+                    <h6>Sun<span> 67oz</span></h6>
+                </div>
+                <!-- <img src=" " alt="graph *maybe* "> -->
+
+            </section>
+        </div>
+        <section class="sleep-card">
+            <img src=" " alt="sleep icon">
+            <div class="sleep-announcements">
+                <article>
+                    <h6>Mon</h6>
+                    <p>5</p>
+                    <p>4.0</p>
+                </article>
+                <article>
+                    <h6>Tue</h6>
+                    <p>6</p>
+                    <p>3.2</p>
+                </article>
+                <article>
+                    <h6>Wed</h6>
+                    <p>7</p>
+                    <p>2.9</p>
+                </article>
+                <article>
+                    <h6>Thu</h6>
+                    <p>6</p>
+                    <p>2.7</p>
+                </article>
+                <article>
+                    <h6>Fri</h6>
+                    <p>6</p>
+                    <p>2.7</p>
+                </article>
+                <article>
+                    <h6>Sat</h6>
+                    <p>7</p>
+                    <p>1.8</p>
+                </article>
+                <article>
+                    <h6>Sun</h6>
+                    <p>8</p>
+                    <p>3.9</p>
+                </article>
+                <article class="today-card">
+                    <h3>Today</h3>
+                    <h3>Hours Slept</h3>
+                    <p id=" todaysHoursSlept">7</p>
+                    <h3>Sleep Quality</h3>
+                    <p id="todaysSleepQuality">3.9</p>
+                </article>
+            </div>
+            <div class="sleep-announcements">
+                <div>
+                    <h3>Avg Hours Slept</h3>
+                    <p id="avgHoursSlept">7.5</p>
+                </div>
+                <div>
+                    <h3>Avg Sleep Quality</h3>
+                    <p id="avgSleepQuality">3.8</p>
+                </div>
+            </div>
+        </section>
+    </section>
+    <aside class="right-container">
+        <img src=" " alt="user icon">
+        <h4>Kevin Kevinson</h4>
+        <section class="friend-card">
+            <div class="friend-display">
+                <img src=" " alt="friend icon">
+                <p id="friend1Info">friend 1</p>
+            </div>
+            <div class="friend-display">
+                <img src=" " alt="friend icon">
+                <p id="friend2Info">friend 2</p>
+            </div>
+            <div class="friend-display">
+                <img src=" " alt="friend icon">
+                <p id="friend3Info">friend 3</p>
+            </div>
+            <div class="friend-display">
+                <img src=" " alt="friend icon">
+                <p id="friend4Info">friend 4</p>
+            </div>
+        </section>
+    </aside>
+    <!-- Do not include the scripts.js file here - it is done automatically by the webpack server -->
     <script src="bundle.js"></script>
-  </body>
+</body>
+
+</html>
+
 </html>
