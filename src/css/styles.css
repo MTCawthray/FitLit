@@ -1,5 +1,86 @@
-body, html {
-  background-image: linear-gradient(to top, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
-  background-repeat: no-repeat;
-  height: 100%;
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    border: .05em solid green;
+    font-family: 'Lato', sans-serif;
 }
+
+
+/* ENTIRE PAGE  */
+
+body,
+html {
+    background-image: linear-gradient(to top, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
+    background-repeat: no-repeat;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* LEFT CONTAINER */
+
+.left-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3em .1em 0em .1em;
+    width: 6%;
+}
+
+h2 {
+    font-size: 16px;
+}
+
+
+/* CENTER CONTAINER */
+
+.center-container {
+    width: 70%;
+}
+
+
+/* STEP CARD */
+
+
+/* HYDRATION CARD */
+
+
+/* SLEEP CARD */
+
+
+/* RIGHT CONTAINER */
+
+.right-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 3em;
+    width: 24%;
+}
+
+h4 {
+    font-size: 24px;
+}
+
+.friend-card {
+    padding: 1em;
+    margin-bottom: 2em;
+    width: 90%;
+}
+
+.friend-display {
+    display: flex;
+    flex-direction: row;
+    padding: 1em;
+}
+
+
+/* FRIEND CARD */
