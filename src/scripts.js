@@ -50,7 +50,11 @@ function getStride(user) {
   return user.strideLength;
 }
 
-console.log(getStride(newUser));
+function getFirstName(user) {
+  return user.findFirstName();
+};
+
+console.log(getFirstName(newUser));
 
 
 //
