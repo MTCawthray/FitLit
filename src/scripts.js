@@ -18,18 +18,20 @@ const userData = require('../src/data/users');
 
 //task 1
 //create an info card on the dashboard with name, friends, daily step goal, stride length.
-let newUser, userRepo;
+let userRepo, newUser;
+
 
 function makeRepo(id) {
   userRepo = new UserRepository(userData);
   newUser = new User(userRepo.findUser(id));
 }
 
+makeRepo(1);
+
 function getName(id) {
   makeRepo(id)
   return newUser.name;
 };
-
 
 function getFriends(user) {
   let userFriends = user.friends;
@@ -40,12 +42,15 @@ function getFriends(user) {
   return returnName;
 };
 
-makeRepo(1);
+function getStepGoal(user) {
+  return user.dailyStepGoal;
+}
 
-let result = getFriends(newUser);
-console.log(result);
+function getStride(user) {
+  return user.strideLength;
+}
 
-
+console.log(getStride(newUser));
 
 
 //
