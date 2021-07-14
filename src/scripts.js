@@ -14,7 +14,8 @@ console.log('This is the JavaScript entry file - your code begins here.');
 // import userData from './data/users';
 import UserRepository from './UserRepository';
 import User from './User';
-const userData = require('../src/data/users');
+
+import userData from '../src/data/users';
 
 //task 1
 //create an info card on the dashboard with name, friends, daily step goal, stride length.
@@ -27,7 +28,7 @@ function makeRepo(id) {
 }
 
 makeRepo(1);
-
+console.log(getName(1));
 function getName(id) {
   makeRepo(id)
   return newUser.name;
