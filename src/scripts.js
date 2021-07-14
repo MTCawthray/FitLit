@@ -11,23 +11,41 @@ console.log('This is the JavaScript entry file - your code begins here.');
 
 // An example of how you tell webpack to use a JS file
 
-import userData from './data/users';
+// import userData from './data/users';
 import UserRepository from './UserRepository';
 import User from './User';
-const sampleUserData = require('../src/data/sample-users');
+const userData = require('../src/data/users');
 
 //task 1
 //create an info card on the dashboard with name, friends, daily step goal, stride length.
+let newUser, userRepo;
+
+function makeRepo(id) {
+  userRepo = new UserRepository(userData);
+  newUser = new User(userRepo.findUser(id));
+}
 
 function getName(id) {
-  let userRepo = new UserRepository(sampleUserData);
-  let user = new User(userRepo.findUser(id));
-  return user.name;
+  makeRepo(id)
+  return newUser.name;
 };
 
+
 function getFriends(user) {
-  return user.friends;
-}
+  let userFriends = user.friends;
+  const returnName = userFriends.reduce((arr, friend) => {
+    arr.push(userRepo.findUser(friend));
+    return arr;
+  }, []).map(friend => friend.name);
+  return returnName;
+};
+
+makeRepo(1);
+
+let result = getFriends(newUser);
+console.log(result);
+
+
 
 
 //
