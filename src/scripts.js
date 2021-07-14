@@ -10,29 +10,56 @@ import domUpdates from '../src/DOM-Manipulation'
 
 
 //----event listeners----///
-window.addEventListener('load', loadFriends)
+window.addEventListener('load', () => {
+  loadUserInfo(userData);
+});
 
+// window.addEventListener('load', loadName);
+
+
+
+//---page load functions---//
+let userRepo, newUser;
+// let newUser = new User(userRepo.findUser(5));
+
+function loadUserInfo(data) {
+  createUsers(data);
+  displayName(newUser);
+  displayFriends(newUser);
+}
+
+function displayName(user) {
+  const name = getName(user);
+  domUpdates.renderUserName(name);
+};
+
+function displayFriends(user) {
+  const friends = getFriends(user);
+  domUpdates.renderFriendCard(friends);
+};
+// function loadName() {
+// const name1 = getName();
+// domUpdates.renderUserName(name1);
+// console.log(name1);
+// }
 
 //task 1
 //create an info card on the dashboard with name, friends, daily step goal, stride length.
-let userRepo, newUser;
-function sayHello() {
-  console.log('hello');
-}
-
 
 // domUpdates.render();
 //---helper functions----//
 
-function makeRepo(data, id) {
+// function makeRepo(data, id) {
+//   userRepo = new UserRepository(data);
+//   newUser = new User(userRepo.findUser(id));
+// }
+function createUsers(data) {
   userRepo = new UserRepository(data);
-  newUser = new User(userRepo.findUser(id));
+  newUser = new User(userRepo.findUser(5));
 }
 
-function getName(data, id) {
-  makeRepo(data, id)
-  const name = newUser.name;
-  domUpdates.renderName(name);
+function getName(user) {
+  return user.name;
 };
 
 function getFriends(user) {
@@ -62,11 +89,5 @@ function getAvgStepGoal(allUsers) {
   return allUsers.findAvgStepGoal();
 }
 
-//---page load functions---//
-function loadFriends() {
-  const friends = getFriends(newUser);
-  domUpdates.renderFriendCard(friends);
-  console.log(friends);
-}
 
 //

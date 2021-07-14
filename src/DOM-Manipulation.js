@@ -3,13 +3,13 @@
 //
 const domUpdates = {
 
-  render() {
-    console.log('hi!')
-    //write query selectors in methods
-    //if using same qs in differnt methods, move it to global scope
-  },
-
-  renderStepCard() {
+  renderUserName(name) {
+    const user = document.getElementById('nameAvatar');
+    user.innerHTML = '';
+    user.innerHTML += `
+    <img src=" " alt="user icon">
+    <h4>${name}</h4>
+    `;
 
   },
 
@@ -18,13 +18,12 @@ const domUpdates = {
     friendCard.innerHTML = '';
     friends.forEach(friend => {
     friendCard.innerHTML +=
-    `  <div class="friend-display">
-    <img src=" " alt="friend icon">
-    <p>${friend}</p>
-    </div>
-    `
-
-  })
+      `<div class="friend-display">
+      <img src=" " alt="friend icon">
+      <p>${friend}</p>
+      </div>
+      `
+    })
   }
 
 }
