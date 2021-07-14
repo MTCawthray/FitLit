@@ -54,7 +54,9 @@ function getFirstName(user) {
   return user.findFirstName();
 };
 
-console.log(getFirstName(newUser));
+function getAvgStepGoal(allUsers) {
+  return allUsers.findAvgStepGoal();
+}
 
 
 //
