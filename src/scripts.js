@@ -1,85 +1,90 @@
 import './css/styles.css';
-// An example of how you tell webpack to use an image (also need to link to it in the index.html)
 import './images/turing-logo.png'
 import UserRepository from './UserRepository';
 import User from './User';
-import userData from '../src/data/users';
-import domUpdates from '../src/DOM-Manipulation'
+import domUpdates from '../src/DOM-Manipulation';
+import apiCalls from '../src/data/apiCalls';
+
+let userRepo, userData, newUser, hydrationRepo, sleepRepo;
 
 
 //----event listeners----///
 window.addEventListener('load', () => {
-  loadUserInfo(userData);
+    loadApiCalls();
 });
+
 
 //---page load functions---//
 
-let userRepo, newUser;
+function loadApiCalls() {
+    apiCalls.getData()
+        .then((promise) => {
+            userData = promise[0].userData;
+            userRepo = new UserRepository(userData)
+            newUser = new User(userRepo.findUser(5))
+            loadUserInfo()
+        })
+}
 
-function loadUserInfo(data) {
-  createUsers(data);
-  displayName(newUser);
-  displayFriends(newUser);
-  displayStepAnnouncements(newUser, userRepo)
-  displayWelcome(newUser);
+function loadUserInfo() {
+    displayName(newUser);
+    displayFriends(newUser);
+    displayStepAnnouncements(newUser, userRepo);
+    displayWelcome(newUser);
 };
 
 function displayWelcome(user) {
-  const firstName = getFirstName(user);
-  domUpdates.renderWelcome(firstName);
+    const firstName = getFirstName(user);
+    domUpdates.renderWelcome(firstName);
 };
 
 function displayName(user) {
-  const name = getName(user);
-  domUpdates.renderUserName(name);
+    const name = getName(user);
+    domUpdates.renderUserName(name);
 };
 
 function displayFriends(user) {
-  const friends = getFriends(user);
-  domUpdates.renderFriendCard(friends);
+    const friends = getFriends(user);
+    domUpdates.renderFriendCard(friends);
 };
 
 function displayStepAnnouncements(user, data) {
-  const goal = getStepGoal(user);
-  const stride = getStride(user);
-  const avgGoal = data.findAvgStepGoal();
-  domUpdates.renderStepAnnouncements(goal, avgGoal, stride);
+    const goal = getStepGoal(user);
+    const stride = getStride(user);
+    const avgGoal = data.findAvgStepGoal();
+    domUpdates.renderStepAnnouncements(goal, avgGoal, stride);
 };
+
 
 //---helper functions----//
 
-function createUsers(data) {
-  userRepo = new UserRepository(data);
-  newUser = new User(userRepo.findUser(5));
-};
-
 function getName(user) {
-  return user.name;
+    return user.name;
 };
 
 function getFriends(user) {
-  let userFriends = user.friends;
-  const returnName = userFriends.reduce((arr, friend) => {
-    arr.push(userRepo.findUser(friend));
-    return arr;
-  }, []).map(friend => friend.name);
-  return returnName;
+    let userFriends = user.friends;
+    const returnName = userFriends.reduce((arr, friend) => {
+        arr.push(userRepo.findUser(friend));
+        return arr;
+    }, []).map(friend => friend.name);
+    return returnName;
 };
 
 function getStepGoal(user) {
-  return user.dailyStepGoal;
+    return user.dailyStepGoal;
 };
 
 function getStride(user) {
-  return user.strideLength;
+    return user.strideLength;
 };
 
 function getFirstName(user) {
-  return user.findFirstName();
+    return user.findFirstName();
 };
 
 function getAvgStepGoal(allUsers) {
-  return allUsers.findAvgStepGoal();
+    return allUsers.findAvgStepGoal();
 };
 
 
