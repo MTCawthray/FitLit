@@ -10,7 +10,6 @@ const domUpdates = {
     <img src=" " alt="user icon">
     <h4>${name}</h4>
     `;
-
   },
 
   renderFriendCard(friends) {
@@ -22,8 +21,8 @@ const domUpdates = {
       <img src=" " alt="friend icon">
       <p>${friend}</p>
       </div>
-      `
-    })
+      `;
+    });
   },
 
   renderStepAnnouncements(goal, avgGoal, stride) {
@@ -37,7 +36,11 @@ const domUpdates = {
     <h3>Stride Length</h3>
     <p class="steps-data">${stride}</p>
     `
+  },
 
+  renderWelcome(firstName) {
+    const welcomeArea = document.getElementById('welcomeMessage');
+    welcomeArea.innerText = `Welcome, ${firstName}!`;
   }
 
 }

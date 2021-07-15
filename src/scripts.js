@@ -21,6 +21,12 @@ function loadUserInfo(data) {
   displayName(newUser);
   displayFriends(newUser);
   displayStepAnnouncements(newUser, userRepo)
+  displayWelcome(newUser);
+};
+
+function displayWelcome(user) {
+  const firstName = getFirstName(user);
+  domUpdates.renderWelcome(firstName);
 };
 
 function displayName(user) {
