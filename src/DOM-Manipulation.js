@@ -24,6 +24,20 @@ const domUpdates = {
       </div>
       `
     })
+  },
+
+  renderStepAnnouncements(goal, avgGoal, stride) {
+    const goals = document.getElementById('stepAnnouncements') ;
+    goals.innerHTML = '';
+    goals.innerHTML += `
+    <h3>Daily Step Goal</h3>
+    <p class=" steps-data">${goal}</p>
+    <h3>Avg User Step Goal</h3>
+    <p class="steps-data">${avgGoal}</p>
+    <h3>Stride Length</h3>
+    <p class="steps-data">${stride}</p>
+    `
+
   }
 
 }
