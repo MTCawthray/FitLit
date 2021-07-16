@@ -4,10 +4,14 @@ class HydrationRepository {
   }
 
   findUser(id) {
-    if (this.data.id === id) {
-      return this.data.find(user => user.id === id);
+    return this.data.find(user => user.userID === id);
     }
+
+
+  findDate(date) {
+    return this.data.filter(user => user.date === date);
   }
+
 }
 
 export default HydrationRepository;

@@ -34,6 +34,21 @@ describe('HydrationRepository', () => {
         });
     });
 
-    
+    describe('findDate()', () => {
+
+      it('should be a function', () => {
+        expect(hydrationRepo.findDate).to.be.a('function');
+      });
+
+      it('should return an array', () => {
+        const foundDate = [
+          { userID: 1, date: '2019/06/15', numOunces: 37 },
+          { userID: 2, date: '2019/06/15', numOunces: 75 },
+          { userID: 3, date: '2019/06/15', numOunces: 47 }
+        ]
+
+        expect(hydrationRepo.findDate("2019/06/15")).to.deep.equal(foundDate);
+      });
+    })
 
 });
