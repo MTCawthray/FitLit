@@ -4,7 +4,7 @@ class HydrationRepository {
   }
 
   findUser(id) {
-    return this.data.find(user => user.userID === id);
+    return this.data.filter(user => user.userID === id);
     }
 
 

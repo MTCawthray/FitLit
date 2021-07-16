@@ -29,10 +29,10 @@ describe('HydrationRepository', () => {
         });
 
         it('should return a specified user', () => {
-          expect(hydrationRepo.findUser(1)).to.deep.equal(sampleHydrationData[0]);
-          expect(hydrationRepo.findUser(2)).to.deep.equal(sampleHydrationData[1]);
-        });
+          let specifiedUser1 = sampleHydrationData.filter(sample => sample.userID === 1);
+          expect(hydrationRepo.findUser(1)).to.deep.equal(specifiedUser1);
     });
+});
 
     describe('findDate()', () => {
 
@@ -40,7 +40,7 @@ describe('HydrationRepository', () => {
         expect(hydrationRepo.findDate).to.be.a('function');
       });
 
-      it('should return an array', () => {
+      it('should return an array of users on a specified date', () => {
         const foundDate = [
           { userID: 1, date: '2019/06/15', numOunces: 37 },
           { userID: 2, date: '2019/06/15', numOunces: 75 },
@@ -49,6 +49,6 @@ describe('HydrationRepository', () => {
 
         expect(hydrationRepo.findDate("2019/06/15")).to.deep.equal(foundDate);
       });
-    })
+    });
 
 });
