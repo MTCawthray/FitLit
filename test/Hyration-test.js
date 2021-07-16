@@ -29,12 +29,27 @@ describe('Hydration', () => {
 
     describe('calculateAvgOunces()', () => {
 
+      it('should be a function', () => {
+        expect(userHydration.calculateAvgOunces).to.be.a('function');
+      });
+
       it('should calculate the average number of ounces for a user', () => {
-      // console.log(userHydration);
       expect(userHydration.calculateAvgOunces()).to.equal(62)
       });
 
-    })
+    });
+
+    describe('findOuncesByDate()', () => {
+
+      it('should be a function', () => {
+        expect(userHydration.findOuncesByDate).to.be.a('function');
+      });
+
+      it('should return number of ounces for a specified user on a specified date', () => {
+        expect(userHydration.findOuncesByDate()).to.equal(75);
+      })
+
+    });
 
 
 });

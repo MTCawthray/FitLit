@@ -15,6 +15,15 @@ calculateAvgOunces() {
   return Math.round(total / userDays.length);
 }
 
+findOuncesByDate() {
+  let foundOunces = this.hydrationRepo.data.find(userDate => {
+    if (userDate.userID === this.userID && userDate.date === this.date) {
+      return userDate;
+    }
+  })
+  return foundOunces.numOunces;
+}
+
 }
 //input- hydrationRepo.findUser(id)
 //output- calculated number of ounces
