@@ -10,7 +10,7 @@ describe('Hydration', () => {
 
   beforeEach(() => {
     hydrationRepo = new HydrationRepository(sampleHydrationData);
-    userHydration = new Hydration(2, "2019/06/15");
+    userHydration = new Hydration(2, "2019/06/15", hydrationRepo);
   });
 
     it('should be a function', () => {
@@ -26,6 +26,15 @@ describe('Hydration', () => {
       expect(userHydration.date).to.equal("2019/06/15")
       expect(userHydration.numOunces).to.equal(null);
     });
+
+    describe('calculateAvgOunces()', () => {
+
+      it('should calculate the average number of ounces for a user', () => {
+      // console.log(userHydration);
+      expect(userHydration.calculateAvgOunces()).to.equal(62)
+      });
+
+    })
 
 
 });
