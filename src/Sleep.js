@@ -31,11 +31,17 @@ class Sleep {
 				return user;
 			}
 		});
-		console.log(foundHours.hoursSlept);
 		return foundHours.hoursSlept;
 	}
 
-	// findQuality() {}
+	findQuality() {
+		const foundQuality = this.sleepRepo.data.find((user) => {
+			if (user.date === this.date && user.userID === this.id) {
+				return user;
+			}
+		});
+		return foundQuality.sleepQuality;
+	}
 }
 
 export default Sleep;

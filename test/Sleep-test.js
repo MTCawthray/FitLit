@@ -45,9 +45,9 @@ describe('Sleep', () => {
 		});
 	});
 
-	// describe('findQuality()', () => {
-	// 	it('should find sleep quality of a user on a specific day', () => {
-	// 		expect(userSleep.findQuality('2019/06/28')).to.equal(4.9);
-	// 	});
-	// });
+	describe('findQuality()', () => {
+		it('should find sleep quality of a user on a specific day', () => {
+			expect(userSleep.findQuality('2019/06/28')).to.equal(4.9);
+		});
+	});
 });
