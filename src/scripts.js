@@ -44,6 +44,7 @@ function loadUserInfo() {
 	displayTodaysOunces();
 	displayWeeklyOunces();
 	displayTodaysSleepCard();
+	displayWeeklySleepInfo()
 }
 
 function displayWelcome(user) {
@@ -85,6 +86,12 @@ function displayTodaysSleepCard() {
 	const hoursSlept = getHoursSlept();
 	const sleepQuality = getSleepQuality();
 	domUpdates.renderTodaysSleepCard(hoursSlept, sleepQuality);
+}
+
+function displayWeeklySleepInfo() {
+	const weeklyHoursSlept = getWeeklyHoursSlept();
+	const weeklyQuality = getWeeklyQuality();
+	domUpdates.renderWeeklySleepInfo(weeklyHoursSlept, weeklyQuality);
 }
 
 
