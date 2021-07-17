@@ -157,4 +157,8 @@ function getWeeklyQuality() {
 	return userSleep.findWeeklyQuality();
 }
 
+function getAvgHours() {
+	return userSleep.calculateAvgHours();
+}
+
 //
