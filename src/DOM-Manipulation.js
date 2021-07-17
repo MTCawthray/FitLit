@@ -27,12 +27,12 @@ const domUpdates = {
 		const goals = document.getElementById('stepAnnouncements');
 		goals.innerHTML = '';
 		goals.innerHTML += `
-    <h3>Daily Step Goal</h3>
-    <p class=" steps-data">${goal}</p>
-    <h3>Avg User Step Goal</h3>
-    <p class="steps-data">${avgGoal}</p>
-    <h3>Stride Length</h3>
-    <p class="steps-data">${stride}</p>
+      <h3>Daily Step Goal</h3>
+      <p class=" steps-data">${goal}</p>
+      <h3>Avg User Step Goal</h3>
+      <p class="steps-data">${avgGoal}</p>
+      <h3>Stride Length</h3>
+      <p class="steps-data">${stride}</p>
     `;
 	},
 
@@ -46,7 +46,20 @@ const domUpdates = {
 		const ouncesDrank = document.getElementById('ouncesDrank');
 		ouncesDrank.innerText = `${ounces}`;
 	},
-	renderWeeklyOunces() {},
+
+	renderWeeklyOunces(ounces) {
+		const weeklyOunces = document.getElementById('weeklyOunces');
+		weeklyOunces.innerHTML = '';
+		weeklyOunces.innerHTML += `
+      <h6>Mon: <span>${ounces[0]} oz</span></h6>
+      <h6>Tue: <span>${ounces[1]} oz</span></h6>
+      <h6>Wed: <span>${ounces[2]} oz</span></h6>
+      <h6>Thu: <span>${ounces[3]} oz</span></h6>
+      <h6>Fri: <span>${ounces[4]} oz</span></h6>
+      <h6>Sat: <span>${ounces[5]} oz</span></h6>
+      <h6>Sun: <span>${ounces[6]} oz</span></h6>
+    `;
+	},
 };
 
 //export object to call on in scripts.js
