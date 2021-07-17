@@ -21,14 +21,19 @@ findOuncesByDate() {
       return userDate;
     }
   })
+  this.numOunces = foundOunces.numOunces;
   return foundOunces.numOunces;
 }
 
+findWeeklyOunces() {
+  let foundUser = this.hydrationRepo.findUser(this.userID);
+  let foundObj = foundUser.find(user => user.date === this.date);
+  let selection = foundUser.indexOf(foundObj) + 1;
+  let foundWeek = foundUser.slice((selection - 7), selection);
+  return foundWeek.map(day => day.numOunces);
+    }
+
+
 }
-//input- hydrationRepo.findUser(id)
-//output- calculated number of ounces
-//we want to assign a variable with the value of our input which is: hydrationRepo.findUser(id)
-//then we need to iterate over that variable and access the numOunces key and add it all up.
-//we need to return the accumulator divided by the array.lenghth
 
 export default Hydration;

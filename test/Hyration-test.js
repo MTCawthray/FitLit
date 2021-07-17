@@ -10,7 +10,7 @@ describe('Hydration', () => {
 
   beforeEach(() => {
     hydrationRepo = new HydrationRepository(sampleHydrationData);
-    userHydration = new Hydration(2, "2019/06/15", hydrationRepo);
+    userHydration = new Hydration(2, "2019/06/28", hydrationRepo);
   });
 
     it('should be a function', () => {
@@ -48,6 +48,20 @@ describe('Hydration', () => {
       it('should return number of ounces for a specified user on a specified date', () => {
         expect(userHydration.findOuncesByDate()).to.equal(75);
       })
+
+    });
+
+    describe('findWeeklyOunces()', () => {
+
+      it('should be a function', () => {
+        expect(userHydration.findWeeklyOunces).to.be.a('function');
+      });
+
+      it('should return an array of ounces for 7 days', () => {
+        expect(userHydration.findWeeklyOunces().length).to.equal(7);
+        expect(userHydration.findWeeklyOunces()).to.deep.equal([58, 44, 33, 67, 27, 70, 56]);
+      });
+
 
     });
 
