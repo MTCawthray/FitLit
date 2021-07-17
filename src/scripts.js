@@ -146,4 +146,8 @@ function getWeeklyHoursSlept() {
 	return userSleep.findWeeklyHours();
 }
 
+function getWeeklyQuality() {
+	return userSleep.findWeeklyQuality();
+}
+
 //
