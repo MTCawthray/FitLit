@@ -28,7 +28,7 @@ const domUpdates = {
 		goals.innerHTML = '';
 		goals.innerHTML += `
       <h3>Daily Step Goal</h3>
-      <p class=" steps-data">${goal}</p>
+      <p class="steps-data">${goal}</p>
       <h3>Avg User Step Goal</h3>
       <p class="steps-data">${avgGoal}</p>
       <h3>Stride Length</h3>
@@ -60,6 +60,20 @@ const domUpdates = {
       <h6>Sun: <span>${ounces[6]} oz</span></h6>
     `;
 	},
+
+// sleep
+
+	renderTodaysSleepCard(hours, quality) {
+		const todaySleepCard = document.getElementById('todayCard');
+		todaySleepCard.innerHTML = '';
+		todaySleepCard.innerHTML += `
+			<h3>Today</h3>
+			<h3>Hours Slept</h3>
+			<p>${hours}</p>
+			<h3>Sleep Quality</h3>
+			<p>${quality}</p>`;
+	}
+
 };
 
 //export object to call on in scripts.js
