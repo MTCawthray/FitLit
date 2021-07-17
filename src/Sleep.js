@@ -13,7 +13,16 @@ class Sleep {
 			num += day.hoursSlept;
 			return num;
 		}, 0);
-		return Math.round(((total / userInfo.length) * 10) / 10);
+		return Math.round((total / userInfo.length) * 10) / 10;
+	}
+
+	calculateAvgQuality() {
+		const userInfo = this.sleepRepo.findUser(this.id);
+		const total = userInfo.reduce((num, day) => {
+			num += day.sleepQuality;
+			return num;
+		}, 0);
+		return Math.round((total / userInfo.length) * 10) / 10;
 	}
 }
 

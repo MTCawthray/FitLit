@@ -32,4 +32,10 @@ describe('Sleep', () => {
 			expect(userSleep.calculateAvgHours()).to.equal(8);
 		});
 	});
+
+	describe('calculateAvgQuality()', () => {
+		it('should return the average sleep quality of a user', () => {
+			expect(userSleep.calculateAvgQuality()).to.equal(3.1);
+		});
+	});
 });
