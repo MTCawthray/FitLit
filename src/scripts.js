@@ -43,6 +43,7 @@ function loadUserInfo() {
 	displayWelcome(newUser);
 	displayTodaysOunces();
 	displayWeeklyOunces();
+	displayTodaysSleepCard();
 }
 
 function displayWelcome(user) {
@@ -141,5 +142,8 @@ function getSleepQuality() {
 	return userSleep.findQuality();
 }
 
+function getWeeklyHoursSlept() {
+	return userSleep.findWeeklyHours();
+}
 
 //
