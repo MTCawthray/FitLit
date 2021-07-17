@@ -22,12 +22,14 @@ function loadApiCalls() {
 	apiCalls.getData().then((promise) => {
 		let userData = promise[0].userData;
 		let hydrationData = promise[1].hydrationData;
+		let sleepData = promise[2].sleepData;
 
 		userRepo = new UserRepository(userData);
 		newUser = new User(userRepo.findUser(5));
 		hydrationRepo = new HydrationRepository(hydrationData);
 		userHydration = new Hydration(newUser.id, '2019/06/28', hydrationRepo);
-		// console.log('newUser', userHydration.hydrationRepo);
+		sleepRepo = new SleepRepository(sleepData);
+		userSleep = new Sleep(newUser.id, '2019/06/28', sleepRepo)
 
 		loadUserInfo();
 	});
