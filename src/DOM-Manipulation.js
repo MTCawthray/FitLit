@@ -115,6 +115,20 @@ const domUpdates = {
 				<p>${hours[6]}</p>
 				<p>${quality[6]}</p>
 			</article>`
+	},
+
+	renderUserAvgSleepInfo(avgHours, avgQuality) {
+		const userAvgSleepInfo = document.getElementById('userAvgSleepInfo');
+		userAvgSleepInfo.innerHTML = '';
+		userAvgSleepInfo.innerHTML += `
+			<div>
+				<h3>Avg Hours Slept</h3>
+				<p>${avgHours}</p>
+			</div>
+			<div>
+				<h3>Avg Sleep Quality</h3>
+				<p>${avgQuality}</p>
+			</div>`
 	}
 
 };
