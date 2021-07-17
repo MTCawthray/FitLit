@@ -78,6 +78,15 @@ function displayWeeklyOunces() {
 	domUpdates.renderWeeklyOunces(weeklyOuncesData);
 }
 
+// sleep
+
+// function displayTodaysSleepCard() {
+// 	const hoursSlept = getHoursSlept();
+// 	const sleepQuality = ;
+// 	domUpdates.renderTodaysSleepCard(hoursSlept, sleepQuality);
+// }
+
+
 //---helper functions----//
 
 // user functions
@@ -121,5 +130,13 @@ function getTodaysOunces() {
 function getWeeklyOunces() {
 	return userHydration.findWeeklyOunces();
 }
+
+// sleep functions
+
+function getHoursSlept() {
+	return userSleep.findHours();
+}
+
+
 
 //
