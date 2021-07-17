@@ -57,4 +57,11 @@ describe('Sleep', () => {
 			expect(userSleep.findWeeklyHours()).to.deep.equal(hours);
 		});
 	});
+
+	describe('findWeeklyQuality()', () => {
+		it("should return a user's sleep quality over a 7 day period", () => {
+			const quality = [3.3, 4.9, 1, 1.3, 2.6, 1.3, 4.9];
+			expect(userSleep.findWeeklyQuality()).to.deep.equal(quality);
+		});
+	});
 });
