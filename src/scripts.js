@@ -137,6 +137,9 @@ function getHoursSlept() {
 	return userSleep.findHours();
 }
 
+function getSleepQuality() {
+	return userSleep.findQuality();
+}
 
 
 //
