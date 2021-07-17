@@ -42,6 +42,15 @@ class Sleep {
 		});
 		return foundQuality.sleepQuality;
 	}
+
+	findWeeklyHours() {
+		const foundUser = this.sleepRepo.findUser(this.id);
+		const foundObj = foundUser.find((user) => user.date === this.date);
+		const selection = foundUser.indexOf(foundObj) + 1;
+		const foundWeek = foundUser.slice(selection - 7, selection);
+		console.log(foundWeek.map((day) => day.hoursSlept));
+		return foundWeek.map((day) => day.hoursSlept);
+	}
 }
 
 export default Sleep;

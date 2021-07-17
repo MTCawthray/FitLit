@@ -50,4 +50,11 @@ describe('Sleep', () => {
 			expect(userSleep.findQuality('2019/06/28')).to.equal(4.9);
 		});
 	});
+
+	describe('findWeeklyHours()', () => {
+		it('should return user hours slept over a 7 day period', () => {
+			const hours = [4.8, 8, 10.8, 9.7, 9.3, 9, 5.2];
+			expect(userSleep.findWeeklyHours()).to.deep.equal(hours);
+		});
+	});
 });
