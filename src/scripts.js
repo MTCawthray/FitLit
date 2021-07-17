@@ -161,4 +161,8 @@ function getAvgHours() {
 	return userSleep.calculateAvgHours();
 }
 
+function getAvgQuality() {
+	return userSleep.calculateAvgQuality();
+}
+
 //
