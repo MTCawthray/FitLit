@@ -1,10 +1,10 @@
 class Sleep {
-	constructor(id, date, sleepRepo) {
+	constructor(id, date, data) {
 		this.id = id;
 		this.date = date;
 		this.sleepQuality = null;
 		this.hoursSlept = null;
-		this.sleepRepo = sleepRepo;
+		this.sleepRepo = data;
 	}
 
 	calculateAvgHours() {
@@ -24,6 +24,18 @@ class Sleep {
 		}, 0);
 		return Math.round((total / userInfo.length) * 10) / 10;
 	}
+
+	findHours() {
+		const foundHours = this.sleepRepo.data.find((user) => {
+			if (user.date === this.date && user.userID === this.id) {
+				return user;
+			}
+		});
+		console.log(foundHours.hoursSlept);
+		return foundHours.hoursSlept;
+	}
+
+	// findQuality() {}
 }
 
 export default Sleep;

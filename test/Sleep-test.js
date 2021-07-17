@@ -38,4 +38,16 @@ describe('Sleep', () => {
 			expect(userSleep.calculateAvgQuality()).to.equal(3.1);
 		});
 	});
+
+	describe('findHours()', () => {
+		it('should find how many hours a user slept on a specific day', () => {
+			expect(userSleep.findHours('2019/06/28')).to.equal(5.2);
+		});
+	});
+
+	// describe('findQuality()', () => {
+	// 	it('should find sleep quality of a user on a specific day', () => {
+	// 		expect(userSleep.findQuality('2019/06/28')).to.equal(4.9);
+	// 	});
+	// });
 });
