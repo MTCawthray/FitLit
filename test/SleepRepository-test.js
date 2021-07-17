@@ -54,4 +54,10 @@ describe('SleepRepository', () => {
 			expect(sleepRepo.findDate('2019/06/28')).to.deep.equal(foundDate);
 		});
 	});
+
+	describe('findAvgSleepQuality()', () => {
+		it('should return an average number of sleep quality for all users', () => {
+			expect(sleepRepo.findAvgSleepQuality()).to.equal(3);
+		});
+	});
 });
