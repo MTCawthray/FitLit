@@ -38,6 +38,7 @@ function loadUserInfo() {
 	displayStepAnnouncements(newUser, userRepo);
 	displayWelcome(newUser);
 	displayTodaysOunces();
+	displayWeeklyOunces();
 }
 
 function displayWelcome(user) {
@@ -68,7 +69,10 @@ function displayTodaysOunces() {
 	domUpdates.renderTodaysOunces(ounces);
 }
 
-function display
+function displayWeeklyOunces() {
+	const weeklyOuncesData = getWeeklyOunces();
+	domUpdates.renderWeeklyOunces(weeklyOuncesData);
+}
 
 //---helper functions----//
 
@@ -108,6 +112,10 @@ function getFirstName(user) {
 // hydration functions
 function getTodaysOunces() {
 	return userHydration.findOuncesByDate();
+}
+
+function getWeeklyOunces() {
+	return userHydration.findWeeklyOunces();
 }
 
 //
