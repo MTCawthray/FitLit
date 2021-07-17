@@ -31,11 +31,13 @@ function loadApiCalls() {
 	});
 }
 
+// user
 function loadUserInfo() {
 	displayName(newUser);
 	displayFriends(newUser);
 	displayStepAnnouncements(newUser, userRepo);
 	displayWelcome(newUser);
+	displayTodaysOunces();
 }
 
 function displayWelcome(user) {
@@ -60,8 +62,17 @@ function displayStepAnnouncements(user, data) {
 	domUpdates.renderStepAnnouncements(goal, avgGoal, stride);
 }
 
+// hydration
+function displayTodaysOunces() {
+	const ounces = getTodaysOunces();
+	domUpdates.renderTodaysOunces(ounces);
+}
+
+function display
+
 //---helper functions----//
 
+// user functions
 function getName(user) {
 	return user.name;
 }
@@ -89,8 +100,14 @@ function getFirstName(user) {
 	return user.findFirstName();
 }
 
-function getAvgStepGoal(allUsers) {
-	return allUsers.findAvgStepGoal();
+// **being handled by method in displayStepAnnouncements
+// function getAvgStepGoal(allUsers) {
+// 	return allUsers.findAvgStepGoal();
+// }
+
+// hydration functions
+function getTodaysOunces() {
+	return userHydration.findOuncesByDate();
 }
 
 //
