@@ -80,11 +80,11 @@ function displayWeeklyOunces() {
 
 // sleep
 
-// function displayTodaysSleepCard() {
-// 	const hoursSlept = getHoursSlept();
-// 	const sleepQuality = ;
-// 	domUpdates.renderTodaysSleepCard(hoursSlept, sleepQuality);
-// }
+function displayTodaysSleepCard() {
+	const hoursSlept = getHoursSlept();
+	const sleepQuality = getSleepQuality();
+	domUpdates.renderTodaysSleepCard(hoursSlept, sleepQuality);
+}
 
 
 //---helper functions----//
