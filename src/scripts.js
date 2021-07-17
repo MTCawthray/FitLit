@@ -4,10 +4,12 @@ import UserRepository from './UserRepository';
 import User from './User';
 import HydrationRepository from './HydrationRepository';
 import Hydration from './Hydration';
+import SleepRepository from './SleepRepository';
+import Sleep from './Sleep';
 import domUpdates from '../src/DOM-Manipulation';
 import apiCalls from '../src/data/apiCalls';
 
-let userRepo, newUser, hydrationRepo, userHydration, sleepRepo;
+let userRepo, newUser, hydrationRepo, userHydration, sleepRepo, userSleep;
 
 //----event listeners----///
 window.addEventListener('load', () => {
