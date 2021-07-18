@@ -15,10 +15,11 @@ const domUpdates = {
 		const friendCard = document.getElementById('friendCard');
 		friendCard.innerHTML = '';
 		friends.forEach((friend) => {
-			friendCard.innerHTML += `<div class="friend-display">
-      <img src="./images/user.png" alt="friend icon">
-      <p>${friend}</p>
-      </div>
+			friendCard.innerHTML += `
+        <div class="friend-display">
+          <img src="./images/user.png" alt="friend icon">
+          <p>${friend}</p>
+        </div>
       `;
 		});
 	},
@@ -67,7 +68,7 @@ const domUpdates = {
 		const todaySleepCard = document.getElementById('todayCard');
 		todaySleepCard.innerHTML = '';
 		todaySleepCard.innerHTML += `
-			<article class="today-card">
+			<article class="today-card-info">
 				<h3>Today</h3>
 				<h3>Hours Slept</h3>
 				<p>${hours}</p>
