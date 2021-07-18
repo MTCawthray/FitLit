@@ -6,8 +6,8 @@ const domUpdates = {
 		const user = document.getElementById('nameAvatar');
 		user.innerHTML = '';
 		user.innerHTML += `
-    <img src=" " alt="user icon">
-    <h4>${name}</h4>
+      <img src="./images/opposum-circle-avatar.png" alt="user icon" class="user-icon">
+      <h4>${name}</h4>
     `;
 	},
 
@@ -15,10 +15,11 @@ const domUpdates = {
 		const friendCard = document.getElementById('friendCard');
 		friendCard.innerHTML = '';
 		friends.forEach((friend) => {
-			friendCard.innerHTML += `<div class="friend-display">
-      <img src=" " alt="friend icon">
-      <p>${friend}</p>
-      </div>
+			friendCard.innerHTML += `
+        <div class="friend-display">
+          <img src="./images/user.png" alt="friend icon">
+          <p>${friend}</p>
+        </div>
       `;
 		});
 	},
@@ -61,13 +62,13 @@ const domUpdates = {
     `;
 	},
 
-// sleep
+	// sleep
 
 	renderTodaysSleepCard(hours, quality) {
 		const todaySleepCard = document.getElementById('todayCard');
 		todaySleepCard.innerHTML = '';
 		todaySleepCard.innerHTML += `
-			<article class="today-card">
+			<article class="today-card-info">
 				<h3>Today</h3>
 				<h3>Hours Slept</h3>
 				<p>${hours}</p>
@@ -114,7 +115,7 @@ const domUpdates = {
 				<h6>Sun</h6>
 				<p>${hours[6]}</p>
 				<p>${quality[6]}</p>
-			</article>`
+			</article>`;
 	},
 
 	renderUserAvgSleepInfo(avgHours, avgQuality) {
@@ -128,9 +129,8 @@ const domUpdates = {
 			<div>
 				<h3>Avg Sleep Quality</h3>
 				<p>${avgQuality}</p>
-			</div>`
-	}
-
+			</div>`;
+	},
 };
 
 //export object to call on in scripts.js

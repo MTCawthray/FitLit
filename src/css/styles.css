@@ -1,154 +1,286 @@
-    *,
-    *:after,
-    *:before {
-        box-sizing: border-box;
-        padding: 0px;
-        margin: 0px;
-        font-family: 'Lato', sans-serif;
-    }
-    /* ENTIRE PAGE  */
-    
-    body,
-    html {
-        background-image: linear-gradient(to top, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
-        background-repeat: no-repeat;
-        height: 100%;
-    }
-    
-    body {
-        display: flex;
-        justify-content: space-between;
-        border: .25em solid black;
-    }
-    /* LEFT CONTAINER */
-    
-    .left-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 3em .1em 0em .1em;
-        width: 6%;
-        /* border: .25em solid black;
-        border-right: none; */
-    }
-    
-    h2 {
-        font-size: 16px;
-    }
-    /* CENTER CONTAINER */
-    
-    .center-container {
-        display: flex;
-        flex-direction: column;
-        width: 70%;
-        border-left: .25em solid black;
-        /* border-right: none; */
-        border-radius: 5em 0em 0em 5em;
-    }
-    
-    .center-top-container {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-        height: 55%;
-    }
-    
-    h1 {
-        text-align: center;
-        padding: .5em;
-    }
-    /* STEP CARD */
-    
-    .step-card {
-        display: flex;
-        justify-content: flex-end;
-        margin: 1em;
-        padding: .5em;
-        height: 65%;
-        border: .15em solid black;
-        border-radius: 2.5em;
-    }
-    
-    .step-announcements {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 50%;
-    }
-    /* HYDRATION CARD */
-    
-    .hydration-card {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        align-items: center;
-        margin: 1em;
-        padding: .5em;
-        height: 84%;
-        border: .15em solid black;
-        border-radius: 2.5em;
-    }
-    /* SLEEP CARD */
-    
-    .sleep-card {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        margin: 1em;
-        padding: .5em;
-        height: 45%;
-        border: .15em solid black;
-        border-radius: 2.5em;
-    }
-    
-    .sleep-announcements {
-        display: flex;
-        justify-content: space-evenly;
-    }
-    
-    section>div>article {
-        border: .15em solid black;
-        border-radius: 1em;
-        width: 8%;
-    }
-    
-    section>div>article,
-    section>div>div {
-        text-align: center;
-    }
-    
-    .today-card {
-        width: 15%;
-    }
-    /* RIGHT CONTAINER */
-    
-    .right-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
-        padding-top: 3em;
-        width: 24%;
-        border-left: .25em solid black;
-        border-radius: 5em 0em 0em 5em;
-    }
-    
-    h4 {
-        font-size: 24px;
-    }
-    /* FRIEND CARD */
-    
-    .friend-card {
-        padding: 1em;
-        margin-bottom: 2em;
-        width: 90%;
-        border: .15em solid black;
-        border-radius: 2.5em;
-    }
-    
-    .friend-display {
-        display: flex;
-        flex-direction: row;
-        padding: 1em;
-    }
+*,
+*:after,
+*:before {
+	box-sizing: border-box;
+	padding: 0px;
+	margin: 0px;
+	font-family: 'Lato', sans-serif;
+	/* border: 0.05em solid green; */
+}
+
+/* ENTIRE PAGE  */
+body,
+html {
+	background: rgb(190, 190, 190);
+	background: linear-gradient(
+		90deg,
+		rgba(190, 190, 190, 1) 45%,
+		rgba(124, 124, 124, 1) 45%
+	);
+	background-repeat: no-repeat;
+	height: 100%;
+}
+
+body {
+	display: flex;
+	justify-content: space-between;
+	border: 0.25em solid black;
+}
+
+img {
+	height: 4vh;
+	width: 3vw;
+	margin: 10px;
+}
+
+/* LEFT CONTAINER */
+.left-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 3em 0.1em 0em 0.1em;
+	width: 6%;
+	background-color: #bebebe;
+	margin-top: 30px;
+}
+
+.icon {
+	margin: 30px 0px 0px 0px;
+	color: white;
+}
+
+h2 {
+	font-size: 16px;
+}
+
+/* CENTER CONTAINER */
+.center-container {
+	display: flex;
+	flex-direction: column;
+	width: 70%;
+	border-left: 3px solid black;
+	/* border-right: none; */
+	border-radius: 60px 0px 0px 60px;
+	background-color: #7c7c7c;
+}
+
+.center-top-container {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	height: 55%;
+}
+
+h1 {
+	text-align: center;
+	padding: 0.5em;
+}
+
+/* STEP CARD */
+.step-card {
+	display: flex;
+	justify-content: flex-end;
+	margin: 1em;
+	padding: 0.5em;
+	height: 65%;
+	border: 1.5px solid black;
+	border-radius: 25px;
+	background-color: #e76459;
+}
+
+.step-announcements {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 50%;
+}
+
+/* HYDRATION CARD */
+.hydration-card {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	margin: 1em;
+	padding: 0.5em;
+	height: 84%;
+	border: 1.5px solid black;
+	border-radius: 25px;
+	background-color: #5999e7;
+}
+
+/* SLEEP CARD */
+.sleep-card {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	margin: 1em;
+	padding: 0.5em;
+	height: 45%;
+	border: 1.5px solid black;
+	border-radius: 25px;
+	background-color: #a73ed5;
+}
+
+.sleep-announcements {
+	display: flex;
+	justify-content: space-evenly;
+}
+
+section > div > article {
+	border: 1.5px solid black;
+	border-radius: 25px;
+	width: 8%;
+}
+
+section > div > article,
+section > div {
+	text-align: center;
+}
+
+.today-card-info {
+	width: 15%;
+}
+
+/* RIGHT CONTAINER */
+.right-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+	padding-top: 3em;
+	width: 24%;
+	border-left: 3px solid black;
+	border-radius: 60px 0px 0px 60px;
+	background-color: #bebebe;
+}
+
+.name-avatar {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.user-icon {
+	height: 14vh;
+	width: auto;
+}
+
+h4 {
+	font-size: 2em;
+	padding: 10px;
+	text-align: center;
+}
+
+/* FRIEND CARD */
+.friend-card {
+	padding: 10px;
+	margin-bottom: 50px;
+	width: 90%;
+	border: 1.5px solid black;
+	border-radius: 25px;
+	background-color: #efeee6;
+}
+
+.friend-display {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding: 1em;
+}
+
+/* 
+
+
+
+*/
+
+@media screen and (max-width: 480px) {
+	body {
+		display: flex;
+		flex-direction: column-reverse;
+		background: rgb(190, 190, 190);
+		background: linear-gradient(
+			0deg,
+			rgba(190, 190, 190, 1) 50%,
+			rgba(124, 124, 124, 1) 51%
+		);
+	}
+	img {
+		height: 5vh;
+		width: 10vw;
+	}
+	h3 {
+		font-size: 0.75em;
+	}
+	.left-container {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		padding: 0.5em;
+		width: auto;
+	}
+	.icon {
+		margin: 0px 5px 0px 20px;
+	}
+	.center-container,
+	.right-container {
+		border-left: none;
+		border-bottom: 2px solid black;
+		border-radius: 0px 0px 35px 35px;
+		padding: 5px;
+		width: auto;
+	}
+
+	.center-container {
+		height: 82vh;
+	}
+	.center-top-container {
+		flex-direction: row;
+		height: 35vh;
+	}
+	h1 {
+		display: none;
+	}
+	.step-card,
+	.hydration-card {
+		width: 45vw;
+		height: 30vh;
+		margin: 0;
+	}
+	.step-announcements {
+	}
+	.sleep-card {
+	}
+	.sleep-announcements {
+	}
+	section > div > article {
+		border: 0.05em solid black;
+		border-radius: 8px;
+		width: 12%;
+	}
+	.today-card {
+		margin: auto;
+		height: 100%;
+		width: 60%;
+	}
+	.right-container {
+		height: 9vh;
+	}
+	.name-avatar {
+		flex-direction: row;
+	}
+	.user-icon {
+		height: auto;
+		width: 10vw;
+	}
+	h4 {
+		font-size: 1.5em;
+	}
+	.friend-card {
+		display: none;
+	}
+}
+
+/*  */
