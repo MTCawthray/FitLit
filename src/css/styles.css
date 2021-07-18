@@ -58,7 +58,7 @@ h2 {
 	display: flex;
 	flex-direction: column;
 	width: 70%;
-	border-left: 0.25em solid black;
+	border-left: 3px solid black;
 	/* border-right: none; */
 	border-radius: 60px 0px 0px 60px;
 	background-color: #7c7c7c;
@@ -151,7 +151,7 @@ section > div {
 	justify-content: space-around;
 	padding-top: 3em;
 	width: 24%;
-	border-left: 0.25em solid black;
+	border-left: 3px solid black;
 	border-radius: 60px 0px 0px 60px;
 	background-color: #bebebe;
 }
@@ -200,8 +200,12 @@ h4 {
 	body {
 		display: flex;
 		flex-direction: column-reverse;
-		/* justify-content: space-between; */
-		/* border: 0.15em solid green; */
+		background: rgb(190, 190, 190);
+		background: linear-gradient(
+			0deg,
+			rgba(190, 190, 190, 1) 50%,
+			rgba(124, 124, 124, 1) 51%
+		);
 	}
 	img {
 		height: 5vh;
@@ -213,15 +217,19 @@ h4 {
 	.left-container {
 		display: flex;
 		flex-direction: row;
+		justify-content: center;
 		padding: 0.5em;
 		width: auto;
+	}
+	.icon {
+		margin: 0px 5px 0px 20px;
 	}
 	.center-container,
 	.right-container {
 		border-left: none;
-		border-bottom: 0.25em solid black;
-		border-radius: 0em 5em 5em 5em;
-		padding: 0.5em;
+		border-bottom: 2px solid black;
+		border-radius: 0px 0px 35px 35px;
+		padding: 5px;
 		width: auto;
 	}
 
