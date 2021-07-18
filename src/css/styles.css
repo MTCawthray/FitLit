@@ -5,7 +5,7 @@
 	padding: 0px;
 	margin: 0px;
 	font-family: 'Lato', sans-serif;
-	border: 0.05em solid green;
+	/* border: 0.05em solid green; */
 }
 
 /* ENTIRE PAGE  */
@@ -175,33 +175,42 @@ h4 {
 	.left-container {
 		display: flex;
 		flex-direction: row;
+		padding: 0.5em;
 		width: auto;
 	}
-	.center-container {
-		height: 50%;
-		width: auto;
-	}
-	.center-top-container {
-	}
-	h1 {
-		display: none;
-	}
-	.step-card {
-	}
-	.step-announcements {
-	}
-	.hydration-card {
-	}
-	.sleep-card {
-	}
-	.sleep-announcements {
-	}
+	.center-container,
 	.right-container {
 		border-left: none;
 		border-bottom: 0.25em solid black;
 		border-radius: 0em 5em 5em 5em;
 		padding: 0.5em;
 		width: auto;
+	}
+
+	.center-container {
+		height: 82vh;
+	}
+	.center-top-container {
+		flex-direction: row;
+		height: 35vh;
+	}
+	h1 {
+		display: none;
+	}
+	.step-card,
+	.hydration-card {
+		width: 45vw;
+		height: 30vh;
+		margin: 0;
+	}
+	.step-announcements {
+	}
+	.sleep-card {
+	}
+	.sleep-announcements {
+	}
+	.right-container {
+		height: 9vh;
 	}
 	.name-avatar {
 		display: flex;
