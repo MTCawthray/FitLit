@@ -6,8 +6,8 @@ const domUpdates = {
 		const user = document.getElementById('nameAvatar');
 		user.innerHTML = '';
 		user.innerHTML += `
-    <img src="./images/opposum-circle-avatar.png" alt="user icon" class="user-icon">
-    <h4>${name}</h4>
+      <img src="./images/opposum-circle-avatar.png" alt="user icon" class="user-icon">
+      <h4>${name}</h4>
     `;
 	},
 
