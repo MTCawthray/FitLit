@@ -23,14 +23,14 @@ function loadApiCalls() {
 		let userData = promise[0].userData;
 		let hydrationData = promise[1].hydrationData;
 		let sleepData = promise[2].sleepData;
-
+		let generateUser = () => Math.floor(Math.random() * userData.length);
+		console.log(generateUser());
 		userRepo = new UserRepository(userData);
-		newUser = new User(userRepo.findUser(5));
+		newUser = new User(userRepo.findUser(generateUser()));
 		hydrationRepo = new HydrationRepository(hydrationData);
 		userHydration = new Hydration(newUser.id, '2019/06/28', hydrationRepo);
 		sleepRepo = new SleepRepository(sleepData);
 		userSleep = new Sleep(newUser.id, '2019/06/28', sleepRepo)
-
 		loadUserInfo();
 	});
 }
@@ -44,7 +44,8 @@ function loadUserInfo() {
 	displayTodaysOunces();
 	displayWeeklyOunces();
 	displayTodaysSleepCard();
-	displayWeeklySleepInfo()
+	displayWeeklySleepInfo();
+	displayUserAvgSleepInfo();
 }
 
 function displayWelcome(user) {
@@ -92,6 +93,12 @@ function displayWeeklySleepInfo() {
 	const weeklyHoursSlept = getWeeklyHoursSlept();
 	const weeklyQuality = getWeeklyQuality();
 	domUpdates.renderWeeklySleepInfo(weeklyHoursSlept, weeklyQuality);
+}
+
+function displayUserAvgSleepInfo() {
+	const avgHours = getAvgHours();
+	const avgQuality = getAvgQuality();
+	domUpdates.renderUserAvgSleepInfo(avgHours, avgQuality);
 }
 
 
