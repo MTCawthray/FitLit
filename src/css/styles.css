@@ -27,6 +27,11 @@ body {
 	border: 0.25em solid black;
 }
 
+img {
+	height: 4vh;
+	width: 3vw;
+}
+
 /* LEFT CONTAINER */
 .left-container {
 	display: flex;
@@ -140,6 +145,17 @@ section > div > div {
 	border-radius: 5em 0em 0em 5em;
 }
 
+.name-avatar {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.user-icon {
+	height: 14vh;
+	width: 10vw;
+}
+
 h4 {
 	font-size: 24px;
 }
@@ -213,7 +229,11 @@ h4 {
 		height: 9vh;
 	}
 	.name-avatar {
-		display: flex;
+		flex-direction: row;
+	}
+	.user-icon {
+		height: auto;
+		width: 10vw;
 	}
 	.friend-card {
 		display: none;
