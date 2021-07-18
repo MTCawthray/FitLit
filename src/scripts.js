@@ -4,10 +4,12 @@ import UserRepository from './UserRepository';
 import User from './User';
 import HydrationRepository from './HydrationRepository';
 import Hydration from './Hydration';
+import SleepRepository from './SleepRepository';
+import Sleep from './Sleep';
 import domUpdates from '../src/DOM-Manipulation';
 import apiCalls from '../src/data/apiCalls';
 
-let userRepo, newUser, hydrationRepo, userHydration, sleepRepo;
+let userRepo, newUser, hydrationRepo, userHydration, sleepRepo, userSleep;
 
 //----event listeners----///
 window.addEventListener('load', () => {
@@ -20,13 +22,15 @@ function loadApiCalls() {
 	apiCalls.getData().then((promise) => {
 		let userData = promise[0].userData;
 		let hydrationData = promise[1].hydrationData;
-
+		let sleepData = promise[2].sleepData;
+		let generateUser = () => Math.floor(Math.random() * userData.length);
+		console.log(generateUser());
 		userRepo = new UserRepository(userData);
-		newUser = new User(userRepo.findUser(5));
+		newUser = new User(userRepo.findUser(generateUser()));
 		hydrationRepo = new HydrationRepository(hydrationData);
 		userHydration = new Hydration(newUser.id, '2019/06/28', hydrationRepo);
-		// console.log('newUser', userHydration.hydrationRepo);
-
+		sleepRepo = new SleepRepository(sleepData);
+		userSleep = new Sleep(newUser.id, '2019/06/28', sleepRepo)
 		loadUserInfo();
 	});
 }
@@ -39,6 +43,9 @@ function loadUserInfo() {
 	displayWelcome(newUser);
 	displayTodaysOunces();
 	displayWeeklyOunces();
+	displayTodaysSleepCard();
+	displayWeeklySleepInfo();
+	displayUserAvgSleepInfo();
 }
 
 function displayWelcome(user) {
@@ -73,6 +80,27 @@ function displayWeeklyOunces() {
 	const weeklyOuncesData = getWeeklyOunces();
 	domUpdates.renderWeeklyOunces(weeklyOuncesData);
 }
+
+// sleep
+
+function displayTodaysSleepCard() {
+	const hoursSlept = getHoursSlept();
+	const sleepQuality = getSleepQuality();
+	domUpdates.renderTodaysSleepCard(hoursSlept, sleepQuality);
+}
+
+function displayWeeklySleepInfo() {
+	const weeklyHoursSlept = getWeeklyHoursSlept();
+	const weeklyQuality = getWeeklyQuality();
+	domUpdates.renderWeeklySleepInfo(weeklyHoursSlept, weeklyQuality);
+}
+
+function displayUserAvgSleepInfo() {
+	const avgHours = getAvgHours();
+	const avgQuality = getAvgQuality();
+	domUpdates.renderUserAvgSleepInfo(avgHours, avgQuality);
+}
+
 
 //---helper functions----//
 
@@ -116,6 +144,32 @@ function getTodaysOunces() {
 
 function getWeeklyOunces() {
 	return userHydration.findWeeklyOunces();
+}
+
+// sleep functions
+
+function getHoursSlept() {
+	return userSleep.findHours();
+}
+
+function getSleepQuality() {
+	return userSleep.findQuality();
+}
+
+function getWeeklyHoursSlept() {
+	return userSleep.findWeeklyHours();
+}
+
+function getWeeklyQuality() {
+	return userSleep.findWeeklyQuality();
+}
+
+function getAvgHours() {
+	return userSleep.calculateAvgHours();
+}
+
+function getAvgQuality() {
+	return userSleep.calculateAvgQuality();
 }
 
 //
