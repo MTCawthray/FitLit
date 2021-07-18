@@ -1,5 +1,11 @@
 import './css/styles.css';
 import './images/turing-logo.png';
+import './images/opposum-circle-avatar.png';
+import './images/shoe.png';
+import './images/sleep.png';
+import './images/user.png';
+import './images/water.png';
+
 import UserRepository from './UserRepository';
 import User from './User';
 import HydrationRepository from './HydrationRepository';
@@ -24,13 +30,12 @@ function loadApiCalls() {
 		let hydrationData = promise[1].hydrationData;
 		let sleepData = promise[2].sleepData;
 		let generateUser = () => Math.floor(Math.random() * userData.length);
-		console.log(generateUser());
 		userRepo = new UserRepository(userData);
 		newUser = new User(userRepo.findUser(generateUser()));
 		hydrationRepo = new HydrationRepository(hydrationData);
 		userHydration = new Hydration(newUser.id, '2019/06/28', hydrationRepo);
 		sleepRepo = new SleepRepository(sleepData);
-		userSleep = new Sleep(newUser.id, '2019/06/28', sleepRepo)
+		userSleep = new Sleep(newUser.id, '2019/06/28', sleepRepo);
 		loadUserInfo();
 	});
 }
@@ -100,7 +105,6 @@ function displayUserAvgSleepInfo() {
 	const avgQuality = getAvgQuality();
 	domUpdates.renderUserAvgSleepInfo(avgHours, avgQuality);
 }
-
 
 //---helper functions----//
 
