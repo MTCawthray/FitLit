@@ -50,26 +50,33 @@ const domUpdates = {
 
 	renderWeeklyOunces(weeklyOunces) {
 		new Chart(document.getElementById('barChartHorizontal'), {
-	    type: 'horizontalBar',
-	    data: {
-	      labels: ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'],
-	      datasets: [
-	        {
-	          label: 'weekly ounces drank',
-	          backgroundColor: ['#3e95cd', '#8e5ea2','#3cba9f','#e8c3b9','#c45850', '#69D53E', '#69D53E'],
-	          data: weeklyOunces
-	        }
-	      ]
-	    },
-	    options: {
-	      legend: { display: false },
-	      title: {
-	        display: true,
-	        text: ''
-	      }
-	    }
-	});
-
+			type: 'horizontalBar',
+			data: {
+				labels: ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'],
+				datasets: [
+					{
+						label: 'weekly ounces drank',
+						backgroundColor: [
+							'#3e95cd',
+							'#8e5ea2',
+							'#3cba9f',
+							'#e8c3b9',
+							'#c45850',
+							'#69D53E',
+							'#69D53E',
+						],
+						data: weeklyOunces,
+					},
+				],
+			},
+			options: {
+				legend: { display: false },
+				title: {
+					display: true,
+					text: '',
+				},
+			},
+		});
 	},
 
 	// sleep
@@ -87,45 +94,18 @@ const domUpdates = {
 			</article>`;
 	},
 
-	renderWeeklySleepInfo(hours, quality) {
+	renderWeeklySleepInfo(days, hours, quality) {
 		const weeklySleepCards = document.getElementById('weeklySleepCards');
 		weeklySleepCards.innerHTML = '';
-		weeklySleepCards.innerHTML += `
-			<article>
-				<h6>Mon</h6>
-				<p>${hours[0]}</p>
-				<p>${quality[0]}</p>
-			</article>
-			<article>
-				<h6>Tue</h6>
-				<p>${hours[1]}</p>
-				<p>${quality[1]}</p>
-			</article>
-			<article>
-				<h6>Wed</h6>
-				<p>${hours[2]}</p>
-				<p>${quality[2]}</p>
-			</article>
-			<article>
-				<h6>Thu</h6>
-				<p>${hours[3]}</p>
-				<p>${quality[3]}</p>
-			</article>
-			<article>
-				<h6>Fri</h6>
-				<p>${hours[4]}</p>
-				<p>${quality[4]}</p>
-			</article>
-			<article>
-				<h6>Sat</h6>
-				<p>${hours[5]}</p>
-				<p>${quality[5]}</p>
-			</article>
-			<article>
-				<h6>Sun</h6>
-				<p>${hours[6]}</p>
-				<p>${quality[6]}</p>
-			</article>`;
+		days.forEach((day, index) => {
+			weeklySleepCards.innerHTML += `
+      <article>
+        <h6>${day}</h6>
+        <p>${hours[index]}</p>
+        <p>${quality[index]}</p>
+      </article>
+      `;
+		});
 	},
 
 	renderUserAvgSleepInfo(avgHours, avgQuality) {
