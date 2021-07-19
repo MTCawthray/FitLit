@@ -31,11 +31,11 @@ const chart = {
           {
             label: 'hours slept',
             backgroundColor: '#3e95cd',
-            data: [hours[0], hours[1], hours[2], hours[3], hours[4], hours[5], hours[6]]
+            data: hours
           }, {
             label: 'sleep quality',
             backgroundColor: '#8e5ea2',
-            data: [quality[0], quality[1], quality[2], quality[3], quality[4], quality[5], quality[6]]
+            data: quality
           }
         ]
       },
