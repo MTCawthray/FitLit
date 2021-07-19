@@ -35,13 +35,14 @@
         <canvas id="barChartHorizontal" width="300" height="100"></canvas>
         <div id="weeklyOunces">
           <!-- hydration announcements render here -->
+          <!-- do we need to delete this div now that our chart is working? -->
         </div>
       </section>
     </div>
     <section class="sleep-card">
       <img src="./images/sleep.png" alt="sleep icon">
       <div class="sleep-announcements" id="weeklySleepCards">
-        <!-- weeklySleepCards render here -->
+        <canvas id="barChartGrouped" width="300" height="110"></canvas>
       </div>
       <div class="today-card" id="todayCard">
         <!-- today's sleep card renders here -->
@@ -53,14 +54,12 @@
   </section>
   <aside class="right-container">
       <div class="name-avatar" id="nameAvatar">
-        <!-- <img src=" " alt="user icon">
-        <h4>Kevin Kevinson</h4> -->
+        <!-- user name and avitar render here -->
       </div>
       <section class="friend-card" id="friendCard">
-        <!-- This is where the friend card populates -->
+        <!--friend card renders here -->
       </section>
   </aside>
-  <!-- Do not include the scripts.js file here - it is done automatically by the webpack server -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
   <script src="bundle.js"></script>
 </body>
