@@ -48,18 +48,28 @@ const domUpdates = {
 		ouncesDrank.innerText = `${ounces}`;
 	},
 
-	renderWeeklyOunces(ounces) {
-		const weeklyOunces = document.getElementById('weeklyOunces');
-		weeklyOunces.innerHTML = '';
-		weeklyOunces.innerHTML += `
-      <h6>Mon: <span>${ounces[0]} oz</span></h6>
-      <h6>Tue: <span>${ounces[1]} oz</span></h6>
-      <h6>Wed: <span>${ounces[2]} oz</span></h6>
-      <h6>Thu: <span>${ounces[3]} oz</span></h6>
-      <h6>Fri: <span>${ounces[4]} oz</span></h6>
-      <h6>Sat: <span>${ounces[5]} oz</span></h6>
-      <h6>Sun: <span>${ounces[6]} oz</span></h6>
-    `;
+	renderWeeklyOunces(weeklyOunces) {
+		new Chart(document.getElementById('barChartHorizontal'), {
+	    type: 'horizontalBar',
+	    data: {
+	      labels: ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'],
+	      datasets: [
+	        {
+	          label: 'weekly ounces drank',
+	          backgroundColor: ['#3e95cd', '#8e5ea2','#3cba9f','#e8c3b9','#c45850', '#69D53E', '#69D53E'],
+	          data: weeklyOunces
+	        }
+	      ]
+	    },
+	    options: {
+	      legend: { display: false },
+	      title: {
+	        display: true,
+	        text: ''
+	      }
+	    }
+	});
+
 	},
 
 	// sleep

@@ -32,6 +32,7 @@
         <img src="./images/water.png" alt="hyration icon">
         <h3>Ounces Drank Today</h3>
         <p class="hyration-data" id="ouncesDrank"></p>
+        <canvas id="barChartHorizontal" width="300" height="100"></canvas>
         <div id="weeklyOunces">
           <!-- hydration announcements render here -->
         </div>
@@ -60,6 +61,7 @@
       </section>
   </aside>
   <!-- Do not include the scripts.js file here - it is done automatically by the webpack server -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
   <script src="bundle.js"></script>
 </body>
 </html>
