@@ -5,6 +5,7 @@ import './images/shoe.png';
 import './images/sleep.png';
 import './images/user.png';
 import './images/water.png';
+import Chart from 'chart.js/auto';
 
 import UserRepository from './UserRepository';
 import User from './User';
