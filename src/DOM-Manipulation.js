@@ -97,54 +97,16 @@ const domUpdates = {
 	renderWeeklySleepInfo(days, hours, quality) {
 		const weeklySleepCards = document.getElementById('weeklySleepCards');
 		weeklySleepCards.innerHTML = '';
-		for (let i = 0; i < days.length; i++) {
+		days.forEach((day, index) => {
 			weeklySleepCards.innerHTML += `
       <article>
-        <h6>${days[i]}</h6>
-        <p>${hours[i]}</p>
-        <p>${quality[i]}</p>
+        <h6>${day}</h6>
+        <p>${hours[index]}</p>
+        <p>${quality[index]}</p>
       </article>
       `;
-		}
+		});
 	},
-
-	// weeklySleepCards.innerHTML += `
-	// 	<article>
-	// 		<h6>Mon</h6>
-	// 		<p>${hours[0]}</p>
-	// 		<p>${quality[0]}</p>
-	// 	</article>
-	// 	<article>
-	// 		<h6>Tue</h6>
-	// 		<p>${hours[1]}</p>
-	// 		<p>${quality[1]}</p>
-	// 	</article>
-	// 	<article>
-	// 		<h6>Wed</h6>
-	// 		<p>${hours[2]}</p>
-	// 		<p>${quality[2]}</p>
-	// 	</article>
-	// 	<article>
-	// 		<h6>Thu</h6>
-	// 		<p>${hours[3]}</p>
-	// 		<p>${quality[3]}</p>
-	// 	</article>
-	// 	<article>
-	// 		<h6>Fri</h6>
-	// 		<p>${hours[4]}</p>
-	// 		<p>${quality[4]}</p>
-	// 	</article>
-	// 	<article>
-	// 		<h6>Sat</h6>
-	// 		<p>${hours[5]}</p>
-	// 		<p>${quality[5]}</p>
-	// 	</article>
-	// 	<article>
-	// 		<h6>Sun</h6>
-	// 		<p>${hours[6]}</p>
-	// 		<p>${quality[6]}</p>
-	// 	</article>`;
-	// },
 
 	renderUserAvgSleepInfo(avgHours, avgQuality) {
 		const userAvgSleepInfo = document.getElementById('userAvgSleepInfo');
