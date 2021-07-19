@@ -50,26 +50,34 @@ const domUpdates = {
 
 	renderWeeklyOunces(weeklyOunces) {
 		new Chart(document.getElementById('barChartHorizontal'), {
-	    type: 'horizontalBar',
-	    data: {
-	      labels: ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'],
-	      datasets: [
-	        {
-	          label: 'weekly ounces drank',
-	          backgroundColor: ['#3e95cd', '#8e5ea2','#3cba9f','#e8c3b9','#c45850', '#69D53E', '#69D53E'],
-	          data: weeklyOunces
-	        }
-	      ]
-	    },
-	    options: {
-	      legend: { display: false },
-	      title: {
-	        display: true,
-	        text: ''
-	      }
-	    }
-	});
-
+			type: 'horizontalBar',
+			data: {
+				labels: ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'],
+				datasets: [
+					{
+						label: 'weekly ounces drank',
+						backgroundColor: [
+							'#4CC9F0',
+							'#4CC9F0',
+							'#4CC9F0',
+							'#4CC9F0',
+							'#4CC9F0',
+							'#4CC9F0',
+							'#4CC9F0',
+						],
+						// fontColor: ['#3A0CA3'],
+						data: weeklyOunces,
+					},
+				],
+			},
+			options: {
+				legend: { display: false },
+				title: {
+					display: true,
+					text: '',
+				},
+			},
+		});
 	},
 
 	// sleep
