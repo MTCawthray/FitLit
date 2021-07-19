@@ -5,14 +5,13 @@ import './images/shoe.png';
 import './images/sleep.png';
 import './images/user.png';
 import './images/water.png';
-import Chart from 'chart.js/auto';
-
 import UserRepository from './UserRepository';
 import User from './User';
 import HydrationRepository from './HydrationRepository';
 import Hydration from './Hydration';
 import SleepRepository from './SleepRepository';
 import Sleep from './Sleep';
+// import chart from 'chart.js/auto'; //We are working on how to pass our weeklyOuncesData to this file..
 import domUpdates from '../src/DOM-Manipulation';
 import apiCalls from '../src/data/apiCalls';
 
@@ -82,7 +81,7 @@ function displayTodaysOunces() {
 	domUpdates.renderTodaysOunces(ounces);
 }
 
-function displayWeeklyOunces() {
+function displayWeeklyOunces(chart) {
 	const weeklyOuncesData = getWeeklyOunces();
 	domUpdates.renderWeeklyOunces(weeklyOuncesData);
 }
