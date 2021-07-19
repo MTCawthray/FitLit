@@ -97,7 +97,8 @@ function displayTodaysSleepCard() {
 function displayWeeklySleepInfo() {
 	const weeklyHoursSlept = getWeeklyHoursSlept();
 	const weeklyQuality = getWeeklyQuality();
-	domUpdates.renderWeeklySleepInfo(weeklyHoursSlept, weeklyQuality);
+	const days = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
+	domUpdates.renderWeeklySleepInfo(days, weeklyHoursSlept, weeklyQuality);
 }
 
 function displayUserAvgSleepInfo() {
