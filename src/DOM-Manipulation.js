@@ -59,7 +59,6 @@ const domUpdates = {
 	},
 
 	// sleep
-
 	renderTodaysSleepCard(hours, quality) {
 		const todaySleepCard = document.getElementById('todayCard');
 		todaySleepCard.innerHTML = '';
@@ -73,7 +72,7 @@ const domUpdates = {
         <h3>Sleep Quality</h3>
         <p>${quality}</p>
       </div>
-      `;
+    `;
 	},
 
 	renderWeeklySleepInfo(hours, quality) {
