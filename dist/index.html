@@ -37,14 +37,16 @@
     </div>
     <section class="sleep-card">
       <img src="./images/sleep.png" alt="sleep icon">
-      <div class="sleep-announcements" id="weeklySleepCards">
-        <canvas id="barChartGrouped" width="300" height="110"></canvas>
+      <div class="bar-chart-grouped">  
+        <canvas id="barChartGrouped"></canvas>
       </div>
-      <div class="today-card" id="todayCard">
-        <!-- today's sleep card renders here -->
-      </div>
-      <div class="sleep-announcements" id="userAvgSleepInfo">
-        <!-- user's avg sleep info renders here -->
+      <div class="sleep-announcements">
+        <div class="today-card" id="todayCard">
+          <!-- today's sleep card renders here -->
+        </div>
+        <div id="userAvgSleepInfo">
+          <!-- user's avg sleep info renders here -->
+        </div>
       </div>
     </section>
   </section>

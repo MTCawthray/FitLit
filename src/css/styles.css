@@ -133,10 +133,8 @@ h1 {
 /* SLEEP CARD */
 .sleep-card {
 	display: flex;
-	flex-direction: column;
 	justify-content: space-evenly;
 	align-self: center;
-	margin: 1em;
 	padding: 0.5em;
 	height: 36%;
 	width: 95%;
@@ -147,21 +145,21 @@ h1 {
 
 .sleep-announcements {
 	display: flex;
-	justify-content: space-evenly;
+	align-items: center;
 }
 
-section > div > article {
-	border: 1.5px solid black;
-	border-radius: 25px;
-	width: 8%;
-}
-
-section > div > article,
-section > div {
-	text-align: center;
+.bar-chart-grouped {
+	align-self: center;
+	width: 400px;
+	height: 200px;
+	padding: 0px 10px 20px 10px;
+	margin: 0px 0px -40px -80px;
 }
 
 .today-card-info {
+	border: 1.5px solid black;
+	border-radius: 25px;
+	width: 8%;
 	width: 15%;
 }
 
