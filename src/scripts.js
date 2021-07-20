@@ -1,10 +1,10 @@
 import './css/styles.css';
 import './images/turing-logo.png';
 import './images/opposum-circle-avatar.png';
-import './images/shoe.png';
-import './images/sleep.png';
+import './images/steps-icon.png';
+import './images/sleep-icon.png';
+import './images/hydration-icon.png';
 import './images/user.png';
-import './images/water.png';
 import UserRepository from './UserRepository';
 import User from './User';
 import HydrationRepository from './HydrationRepository';
