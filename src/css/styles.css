@@ -6,7 +6,6 @@
 	margin: 0px;
 	font-family: 'Lato', sans-serif;
 	color: #f8f9fa;
-	/* border: 0.05em solid green; */
 }
 
 /* ENTIRE PAGE  */
@@ -55,12 +54,15 @@ h2 {
 	padding: 3px;
 	text-shadow: 1px 1px #343a40;
 }
+
 .step-title {
 	color: #ff9f1c;
 }
+
 .hydration-title {
 	color: #4361ee;
 }
+
 .sleep-title {
 	color: #f72585;
 }
@@ -80,7 +82,6 @@ h2 {
 	display: flex;
 	flex-direction: column;
 	flex-wrap: wrap;
-	/* justify-content: center; */
 	align-items: center;
 	height: 55%;
 	justify-content: flex-end;
@@ -122,14 +123,10 @@ h1 {
 .hydration-card {
 	display: flex;
 	flex-direction: column;
-	/* justify-content: space-evenly;
-	align-items: center; */
 	background-color: #495057;
 	border: 1.5px solid #4361ee;
 	border-radius: 25px;
 	padding: 20px;
-	/* height: 85%;
-	width: 60%; */
 	height: 75%;
 	width: 57%;
 }
@@ -138,8 +135,6 @@ h1 {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	/* align-content: flex-start;
-	align-self: flex-start; */
 	height: 18%;
 	width: 70%;
 }
@@ -157,7 +152,6 @@ h1 {
 	width: 400px;
 	height: 250px;
 	padding: 20px 10px 20px 10px;
-	/* margin: 0px 0px -50px 0px; */
 }
 
 /* SLEEP CARD */
@@ -194,6 +188,10 @@ section > section > img {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-evenly;
+}
+
+.today-card-info {
+	border-right: 1px solid #f72585;
 }
 
 .sleep-info {
@@ -259,11 +257,11 @@ h4 {
 	padding: 1em;
 }
 
-/* 
-
+/*
 
 
 */
+
 /* FOR PHONE DISPLAY */
 @media screen and (max-width: 480px) {
 	/* ENTIRE PAGE */
@@ -280,7 +278,7 @@ h4 {
 
 	img {
 		height: 5vh;
-		width: 10vw;
+		width: 11vw;
 	}
 
 	h3 {
@@ -297,6 +295,7 @@ h4 {
 		margin: 0;
 		width: auto;
 	}
+
 	.icon {
 		margin: 0px 5px 0px 20px;
 	}
@@ -314,6 +313,7 @@ h4 {
 	.center-container {
 		height: 85%;
 	}
+
 	.center-top-container {
 		justify-content: space-evenly;
 		height: 53%;
@@ -334,17 +334,20 @@ h4 {
 		flex-direction: row;
 		height: 26%;
 	}
+
 	.step-announcements {
 		flex-direction: row;
 		width: 80%;
 		height: auto;
 		margin: 5px;
 	}
+
 	.step-info {
 		display: flex;
 		flex-direction: column;
 		padding: 3px;
 	}
+
 	/* HYDRATION CARD */
 	.hydration-card {
 		justify-content: space-between;
@@ -430,5 +433,3 @@ h4 {
 		display: none;
 	}
 }
-
-/*  */
