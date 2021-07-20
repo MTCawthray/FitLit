@@ -58,13 +58,16 @@ const domUpdates = {
 		const todaySleepCard = document.getElementById('todayCard');
 		todaySleepCard.innerHTML = '';
 		todaySleepCard.innerHTML += `
-			<article class="today-card-info">
-				<h3>Today</h3>
-				<h3>Hours Slept</h3>
-				<p>${hours}</p>
-				<h3>Sleep Quality</h3>
-				<p>${quality}</p>
-			</article>`;
+      <h3 class="title">Today</h3>
+      <div class="sleep-info">
+        <h3>Hours Slept</h3>
+        <p>${hours}</p>
+      </div>
+      <div class="sleep-info">
+        <h3>Sleep Quality</h3>
+        <p>${quality}</p>
+      </div>
+      `;
 	},
 
 	renderWeeklySleepInfo(hours, quality) {
@@ -75,14 +78,16 @@ const domUpdates = {
 		const userAvgSleepInfo = document.getElementById('userAvgSleepInfo');
 		userAvgSleepInfo.innerHTML = '';
 		userAvgSleepInfo.innerHTML += `
-			<div>
-				<h3>Avg Hours Slept</h3>
+			<h3 class="title">Average</h3>
+      <div class="sleep-info">
+				<h3>Hours Slept</h3>
 				<p>${avgHours}</p>
 			</div>
-			<div>
-				<h3>Avg Sleep Quality</h3>
+			<div class="sleep-info">
+				<h3>Sleep Quality</h3>
 				<p>${avgQuality}</p>
-			</div>`;
+			</div>
+    `;
 	},
 };
 
