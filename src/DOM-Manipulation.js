@@ -1,5 +1,5 @@
-//make an object and write functions inside
-//
+import chart from '../src/Chart.js'
+
 const domUpdates = {
 	// user
 	renderUserName(name) {
@@ -49,34 +49,7 @@ const domUpdates = {
 	},
 
 	renderWeeklyOunces(weeklyOunces) {
-		new Chart(document.getElementById('barChartHorizontal'), {
-			type: 'horizontalBar',
-			data: {
-				labels: ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'],
-				datasets: [
-					{
-						label: 'weekly ounces drank',
-						backgroundColor: [
-							'#3e95cd',
-							'#8e5ea2',
-							'#3cba9f',
-							'#e8c3b9',
-							'#c45850',
-							'#69D53E',
-							'#69D53E',
-						],
-						data: weeklyOunces,
-					},
-				],
-			},
-			options: {
-				legend: { display: false },
-				title: {
-					display: true,
-					text: '',
-				},
-			},
-		});
+		chart.horizontalBar(weeklyOunces);
 	},
 
 	// sleep
@@ -94,18 +67,8 @@ const domUpdates = {
 			</article>`;
 	},
 
-	renderWeeklySleepInfo(days, hours, quality) {
-		const weeklySleepCards = document.getElementById('weeklySleepCards');
-		weeklySleepCards.innerHTML = '';
-		days.forEach((day, index) => {
-			weeklySleepCards.innerHTML += `
-      <article>
-        <h6>${day}</h6>
-        <p>${hours[index]}</p>
-        <p>${quality[index]}</p>
-      </article>
-      `;
-		});
+	renderWeeklySleepInfo(hours, quality) {
+		chart.groupedBar(hours, quality);
 	},
 
 	renderUserAvgSleepInfo(avgHours, avgQuality) {
@@ -123,6 +86,4 @@ const domUpdates = {
 	},
 };
 
-//export object to call on in scripts.js
-//
 export default domUpdates;
