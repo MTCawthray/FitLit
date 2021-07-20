@@ -122,12 +122,12 @@ h1 {
 	flex-direction: column;
 	justify-content: space-evenly;
 	align-items: center;
+	background-color: #495057;
+	border: 1.5px solid #4361ee;
+	border-radius: 25px;
 	padding: 20px;
 	height: 85%;
 	width: 60%;
-	border: 1.5px solid #4361ee;
-	border-radius: 25px;
-	background-color: #495057;
 }
 
 .hyration-card-info {
@@ -257,8 +257,9 @@ h4 {
 
 
 */
-
+/* FOR PHONE DISPLAY */
 @media screen and (max-width: 480px) {
+	/* ENTIRE PAGE */
 	body {
 		display: flex;
 		flex-direction: column-reverse;
@@ -269,13 +270,17 @@ h4 {
 			rgba(52, 58, 64, 1) 51%
 		);
 	}
+
 	img {
 		height: 5vh;
 		width: 10vw;
 	}
+
 	h3 {
 		font-size: 0.75em;
 	}
+
+	/* LEFT CONTAINER now BOTTOM CONTAINER*/
 	.left-container {
 		display: flex;
 		flex-direction: row;
@@ -286,6 +291,8 @@ h4 {
 	.icon {
 		margin: 0px 5px 0px 20px;
 	}
+
+	/* CENTER CONTAINER */
 	.center-container,
 	.right-container {
 		border-left: none;
@@ -300,46 +307,91 @@ h4 {
 	}
 	.center-top-container {
 		flex-direction: row;
+		justify-content: space-evenly;
 		height: 35vh;
 	}
 	h1 {
 		display: none;
 	}
+
+	/* STEP CARD */
 	.step-card,
 	.hydration-card {
-		width: 45vw;
-		height: 30vh;
-		margin: 0;
+		width: 45%;
+		height: 85%;
+		/* margin: 0; */
 	}
+
 	.step-announcements {
 	}
+
+	/* HYDRATION CARD */
+	.hydration-card {
+		justify-content: space-between;
+		padding: 5px;
+	}
+
+	.hyration-card-info {
+		flex-direction: column;
+		align-items: flex-start;
+		height: 25%;
+		width: 100%;
+	}
+
+	.hyration-data {
+		text-align: center;
+		width: 100%;
+		margin-top: 6px;
+	}
+	.chart-box {
+		height: 50%;
+		width: 100%;
+	}
+	#barChartHorizontal {
+		height: 50%;
+		width: 100%;
+		padding: 0px 3px 3px 3px;
+		margin: 0;
+	}
+
+	/* SLEEP CARD */
 	.sleep-card {
 	}
+
 	.sleep-announcements {
 	}
+
 	section > div > article {
 		border: 0.05em solid black;
 		border-radius: 8px;
 		width: 12%;
 	}
+
 	.today-card {
 		margin: auto;
 		height: 100%;
 		width: 60%;
 	}
+
+	/* RIGHT CONTAINER now TOP CONTAINER*/
 	.right-container {
 		height: 9vh;
 	}
+
 	.name-avatar {
 		flex-direction: row;
 	}
+
 	.user-icon {
 		height: auto;
 		width: 10vw;
 	}
+
 	h4 {
 		font-size: 1.5em;
 	}
+
+	/* FRIEND CARD */
 	.friend-card {
 		display: none;
 	}
