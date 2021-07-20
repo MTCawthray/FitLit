@@ -88,6 +88,17 @@ h2 {
 h1 {
 	text-align: center;
 	padding: 0.5em;
+	font-size: 28px;
+	background: -webkit-linear-gradient(
+		90deg,
+		rgba(255, 159, 28, 1) 33%,
+		rgba(247, 37, 133, 1) 50%,
+		rgba(67, 97, 238, 1) 70%
+	);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	font-style: italic;
+	margin-bottom: 17px;
 }
 
 /* STEP CARD */
@@ -95,7 +106,7 @@ h1 {
 	display: flex;
 	justify-content: space-between;
 	padding: 10px;
-	height: 60%;
+	height: 65%;
 	width: 25%;
 	border: 1.5px solid #ff9f1c;
 	border-radius: 25px;
@@ -110,10 +121,10 @@ h1 {
 	text-align: center;
 	width: 70%;
 }
-section > div > section > div > h3,
+/* section > div > section > div > h3,
 section > div > section > div > p {
 	color: #ff9f1c;
-}
+} */
 
 /* HYDRATION CARD */
 .hydration-card {
@@ -121,17 +132,33 @@ section > div > section > div > p {
 	flex-direction: column;
 	justify-content: space-evenly;
 	align-items: center;
-	padding: 0.5em;
-	height: 75%;
+	padding: 20px;
+	height: 85%;
 	width: 60%;
 	border: 1.5px solid #4361ee;
 	border-radius: 25px;
 	background-color: #495057;
 }
-section > div > section > h3,
+
+/* section > div > section > h3,
 section > div > section > p {
 	color: #4361ee;
+} */
+.hyration-card-info {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	align-content: flex-start;
+	align-self: flex-start;
+	width: 85%;
 }
+
+.hyration-data {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
 #barChartHorizontal {
 	/* color: #3a0ca3; */
 	height: 55%;
@@ -157,10 +184,10 @@ section > div > section > p {
 	display: flex;
 	align-items: center;
 }
-section > section > div > div > article > h3,
+/* section > section > div > div > article > h3,
 section > section > div > div > article > p {
 	color: #f72585;
-}
+} */
 
 .bar-chart-grouped {
 	align-self: center;
