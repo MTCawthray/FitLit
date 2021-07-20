@@ -28,12 +28,18 @@ const domUpdates = {
 		const goals = document.getElementById('stepAnnouncements');
 		goals.innerHTML = '';
 		goals.innerHTML += `
-      <h3>Daily Step Goal</h3>
-      <p class="steps-data">${goal}</p>
-      <h3>Avg User Step Goal</h3>
-      <p class="steps-data">${avgGoal}</p>
-      <h3>Stride Length</h3>
-      <p class="steps-data">${stride}</p>
+      <div class="step-info">
+        <h3>Daily Step Goal</h3>
+        <p class="steps-data">${goal}</p>
+      </div>
+      <div class="step-info">
+        <h3>Avg User Step Goal</h3>
+        <p class="steps-data">${avgGoal}</p>
+      </div>
+      <div class="step-info">
+        <h3>Stride Length</h3>
+        <p class="steps-data">${stride}</p>
+      </div>
     `;
 	},
 
@@ -58,7 +64,7 @@ const domUpdates = {
 		const todaySleepCard = document.getElementById('todayCard');
 		todaySleepCard.innerHTML = '';
 		todaySleepCard.innerHTML += `
-      <h3 class="title">Today</h3>
+      <h3>Today</h3>
       <div class="sleep-info">
         <h3>Hours Slept</h3>
         <p>${hours}</p>
@@ -78,7 +84,7 @@ const domUpdates = {
 		const userAvgSleepInfo = document.getElementById('userAvgSleepInfo');
 		userAvgSleepInfo.innerHTML = '';
 		userAvgSleepInfo.innerHTML += `
-			<h3 class="title">Average</h3>
+			<h3>Average</h3>
       <div class="sleep-info">
 				<h3>Hours Slept</h3>
 				<p>${avgHours}</p>
