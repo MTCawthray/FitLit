@@ -89,14 +89,6 @@ h1 {
 	text-align: center;
 	padding: 0.5em;
 	font-size: 28px;
-	background: -webkit-linear-gradient(
-		90deg,
-		rgba(255, 159, 28, 1) 33%,
-		rgba(247, 37, 133, 1) 50%,
-		rgba(67, 97, 238, 1) 70%
-	);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
 	font-style: italic;
 	margin-bottom: 17px;
 }
@@ -104,10 +96,11 @@ h1 {
 /* STEP CARD */
 .step-card {
 	display: flex;
+	flex-direction: column;
 	justify-content: space-between;
 	padding: 10px;
 	height: 65%;
-	width: 25%;
+	width: 30%;
 	border: 1.5px solid #ff9f1c;
 	border-radius: 25px;
 	background-color: #495057;
@@ -119,12 +112,9 @@ h1 {
 	align-items: center;
 	justify-content: space-evenly;
 	text-align: center;
-	width: 70%;
+	width: 100%;
+	height: 80%;
 }
-/* section > div > section > div > h3,
-section > div > section > div > p {
-	color: #ff9f1c;
-} */
 
 /* HYDRATION CARD */
 .hydration-card {
@@ -140,16 +130,13 @@ section > div > section > div > p {
 	background-color: #495057;
 }
 
-/* section > div > section > h3,
-section > div > section > p {
-	color: #4361ee;
-} */
 .hyration-card-info {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	align-content: flex-start;
 	align-self: flex-start;
+	height: 20%;
 	width: 85%;
 }
 
@@ -157,6 +144,8 @@ section > div > section > p {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	justify-content: space-between;
+	height: 90%;
 }
 
 #barChartHorizontal {
@@ -174,7 +163,7 @@ section > div > section > p {
 	align-self: center;
 	padding: 0.5em;
 	height: 36%;
-	width: 95%;
+	width: 94%;
 	border: 1.5px solid #f72585;
 	border-radius: 25px;
 	background-color: #495057;
@@ -183,11 +172,30 @@ section > div > section > p {
 .sleep-announcements {
 	display: flex;
 	align-items: center;
+	justify-content: space-evenly;
+	height: 100%;
+	width: 40%;
+	text-align: center;
 }
-/* section > section > div > div > article > h3,
-section > section > div > div > article > p {
+.today-card-info,
+.user-avg-sleep-info {
+	height: 80%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+}
+/* .title {
 	color: #f72585;
 } */
+
+.sleep-info {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	padding: 5px;
+	height: 33%;
+}
 
 .bar-chart-grouped {
 	align-self: center;
@@ -195,13 +203,6 @@ section > section > div > div > article > p {
 	height: 200px;
 	padding: 0px 10px 20px 10px;
 	margin: 0px 0px -40px -80px;
-}
-
-.today-card-info {
-	border: 1.5px solid black;
-	border-radius: 25px;
-	width: 8%;
-	width: 15%;
 }
 
 /* RIGHT CONTAINER */
