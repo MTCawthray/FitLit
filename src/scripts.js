@@ -1,10 +1,10 @@
 import './css/styles.css';
 import './images/turing-logo.png';
 import './images/opposum-circle-avatar.png';
-import './images/shoe.png';
-import './images/sleep.png';
+import './images/steps-icon.png';
+import './images/sleep-icon.png';
+import './images/hydration-icon.png';
 import './images/user.png';
-import './images/water.png';
 import UserRepository from './UserRepository';
 import User from './User';
 import HydrationRepository from './HydrationRepository';
@@ -97,8 +97,7 @@ function displayTodaysSleepCard() {
 function displayWeeklySleepInfo() {
 	const weeklyHoursSlept = getWeeklyHoursSlept();
 	const weeklyQuality = getWeeklyQuality();
-	const days = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
-	domUpdates.renderWeeklySleepInfo(days, weeklyHoursSlept, weeklyQuality);
+	domUpdates.renderWeeklySleepInfo(weeklyHoursSlept, weeklyQuality);
 }
 
 function displayUserAvgSleepInfo() {

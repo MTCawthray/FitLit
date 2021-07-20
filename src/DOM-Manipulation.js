@@ -1,4 +1,4 @@
-import chart from '../src/Chart.js'
+import chart from '../src/Chart.js';
 
 const domUpdates = {
 	// user
@@ -28,12 +28,18 @@ const domUpdates = {
 		const goals = document.getElementById('stepAnnouncements');
 		goals.innerHTML = '';
 		goals.innerHTML += `
-      <h3>Daily Step Goal</h3>
-      <p class="steps-data">${goal}</p>
-      <h3>Avg User Step Goal</h3>
-      <p class="steps-data">${avgGoal}</p>
-      <h3>Stride Length</h3>
-      <p class="steps-data">${stride}</p>
+      <div class="step-info">
+        <h3>Daily Step Goal</h3>
+        <p class="steps-data">${goal}</p>
+      </div>
+      <div class="step-info">
+        <h3>Avg User Step Goal</h3>
+        <p class="steps-data">${avgGoal}</p>
+      </div>
+      <div class="step-info">
+        <h3>Stride Length</h3>
+        <p class="steps-data">${stride}</p>
+      </div>
     `;
 	},
 
@@ -58,13 +64,16 @@ const domUpdates = {
 		const todaySleepCard = document.getElementById('todayCard');
 		todaySleepCard.innerHTML = '';
 		todaySleepCard.innerHTML += `
-			<article class="today-card-info">
-				<h3>Today</h3>
-				<h3>Hours Slept</h3>
-				<p>${hours}</p>
-				<h3>Sleep Quality</h3>
-				<p>${quality}</p>
-			</article>`;
+      <h3>Today</h3>
+      <div class="sleep-info">
+        <h3>Hours Slept</h3>
+        <p>${hours}</p>
+      </div>
+      <div class="sleep-info">
+        <h3>Sleep Quality</h3>
+        <p>${quality}</p>
+      </div>
+      `;
 	},
 
 	renderWeeklySleepInfo(hours, quality) {
@@ -75,14 +84,16 @@ const domUpdates = {
 		const userAvgSleepInfo = document.getElementById('userAvgSleepInfo');
 		userAvgSleepInfo.innerHTML = '';
 		userAvgSleepInfo.innerHTML += `
-			<div>
-				<h3>Avg Hours Slept</h3>
+			<h3>Average</h3>
+      <div class="sleep-info">
+				<h3>Hours Slept</h3>
 				<p>${avgHours}</p>
 			</div>
-			<div>
-				<h3>Avg Sleep Quality</h3>
+			<div class="sleep-info">
+				<h3>Sleep Quality</h3>
 				<p>${avgQuality}</p>
-			</div>`;
+			</div>
+    `;
 	},
 };
 

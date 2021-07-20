@@ -5,17 +5,18 @@
 	padding: 0px;
 	margin: 0px;
 	font-family: 'Lato', sans-serif;
-	/* border: 0.05em solid green; */
+	color: #f8f9fa;
 }
 
 /* ENTIRE PAGE  */
 body,
 html {
 	background: rgb(190, 190, 190);
+	background: rgb(73, 80, 87);
 	background: linear-gradient(
 		90deg,
-		rgba(190, 190, 190, 1) 45%,
-		rgba(124, 124, 124, 1) 45%
+		rgba(73, 80, 87, 1) 45%,
+		rgba(52, 58, 64, 1) 45%
 	);
 	background-repeat: no-repeat;
 	height: 100%;
@@ -24,7 +25,6 @@ html {
 body {
 	display: flex;
 	justify-content: space-between;
-	border: 0.25em solid black;
 }
 
 img {
@@ -39,8 +39,8 @@ img {
 	flex-direction: column;
 	align-items: center;
 	padding: 3em 0.1em 0em 0.1em;
-	width: 6%;
-	background-color: #bebebe;
+	width: 7%;
+	background-color: #495057;
 	margin-top: 30px;
 }
 
@@ -50,7 +50,21 @@ img {
 }
 
 h2 {
-	font-size: 16px;
+	font-size: 1em;
+	padding: 3px;
+	text-shadow: 1px 1px #343a40;
+}
+
+.step-title {
+	color: #ff9f1c;
+}
+
+.hydration-title {
+	color: #4361ee;
+}
+
+.sleep-title {
+	color: #f72585;
 }
 
 /* CENTER CONTAINER */
@@ -59,88 +73,141 @@ h2 {
 	flex-direction: column;
 	width: 70%;
 	border-left: 3px solid black;
-	/* border-right: none; */
 	border-radius: 60px 0px 0px 60px;
-	background-color: #7c7c7c;
+	background-color: #343a40;
+	padding: 20px;
 }
 
 .center-top-container {
 	display: flex;
 	flex-direction: column;
 	flex-wrap: wrap;
-	justify-content: space-evenly;
+	align-items: center;
 	height: 55%;
+	justify-content: flex-end;
+	margin-top: -40px;
 }
 
 h1 {
 	text-align: center;
 	padding: 0.5em;
+	font-size: 28px;
+	font-style: italic;
+	margin-bottom: 17px;
 }
 
 /* STEP CARD */
 .step-card {
 	display: flex;
-	justify-content: flex-end;
-	margin: 1em;
-	padding: 0.5em;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 10px;
 	height: 65%;
-	border: 1.5px solid black;
+	width: 30%;
+	border: 1.5px solid #ff9f1c;
 	border-radius: 25px;
-	background-color: #e76459;
+	background-color: #495057;
 }
 
 .step-announcements {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	width: 50%;
+	justify-content: space-evenly;
+	text-align: center;
+	width: 100%;
+	height: 80%;
 }
 
 /* HYDRATION CARD */
 .hydration-card {
 	display: flex;
 	flex-direction: column;
-	justify-content: space-evenly;
-	align-items: center;
-	margin: 1em;
-	padding: 0.5em;
-	height: 84%;
-	border: 1.5px solid black;
+	background-color: #495057;
+	border: 1.5px solid #4361ee;
 	border-radius: 25px;
-	background-color: #5999e7;
+	padding: 20px;
+	height: 75%;
+	width: 57%;
+}
+
+.hyration-card-info {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 18%;
+	width: 70%;
+}
+
+.hyration-data {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	height: 90%;
+}
+
+.bar-chart-horizontal {
+	align-self: center;
+	width: 400px;
+	height: 250px;
+	padding: 20px 10px 20px 10px;
 }
 
 /* SLEEP CARD */
 .sleep-card {
 	display: flex;
-	flex-direction: column;
 	justify-content: space-evenly;
-	margin: 1em;
-	padding: 0.5em;
-	height: 45%;
-	border: 1.5px solid black;
+	align-self: center;
+	padding: 5px;
+	height: 36%;
+	width: 94%;
+	border: 1.5px solid #f72585;
 	border-radius: 25px;
-	background-color: #a73ed5;
+	background-color: #495057;
+	margin: 40px 0px 0px 7px;
+}
+
+section > section > img {
+	margin-top: 20px;
 }
 
 .sleep-announcements {
 	display: flex;
+	align-items: center;
 	justify-content: space-evenly;
-}
-
-section > div > article {
-	border: 1.5px solid black;
-	border-radius: 25px;
-	width: 8%;
-}
-
-section > div > article,
-section > div {
+	height: 100%;
+	width: 40%;
 	text-align: center;
 }
 
+.today-card-info,
+.user-avg-sleep-info {
+	height: 80%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+}
+
 .today-card-info {
-	width: 15%;
+	border-right: 1px solid #f72585;
+}
+
+.sleep-info {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	padding: 5px;
+	height: 33%;
+}
+
+.bar-chart-grouped {
+	align-self: center;
+	width: 400px;
+	height: 200px;
+	padding: 0px 10px 20px 10px;
+	margin: 0px 0px -40px -40px;
 }
 
 /* RIGHT CONTAINER */
@@ -153,7 +220,7 @@ section > div {
 	width: 24%;
 	border-left: 3px solid black;
 	border-radius: 60px 0px 0px 60px;
-	background-color: #bebebe;
+	background-color: #495057;
 }
 
 .name-avatar {
@@ -180,7 +247,7 @@ h4 {
 	width: 90%;
 	border: 1.5px solid black;
 	border-radius: 25px;
-	background-color: #efeee6;
+	background-color: #343a40;
 }
 
 .friend-display {
@@ -190,40 +257,50 @@ h4 {
 	padding: 1em;
 }
 
-/* 
-
+/*
 
 
 */
 
+/* FOR PHONE DISPLAY */
 @media screen and (max-width: 480px) {
+	/* ENTIRE PAGE */
 	body {
 		display: flex;
 		flex-direction: column-reverse;
-		background: rgb(190, 190, 190);
+		background: rgb(73, 80, 87);
 		background: linear-gradient(
 			0deg,
-			rgba(190, 190, 190, 1) 50%,
-			rgba(124, 124, 124, 1) 51%
+			rgba(73, 80, 87, 1) 50%,
+			rgba(52, 58, 64, 1) 51%
 		);
 	}
+
 	img {
 		height: 5vh;
-		width: 10vw;
+		width: 11vw;
 	}
+
 	h3 {
 		font-size: 0.75em;
 	}
+
+	/* LEFT CONTAINER now BOTTOM CONTAINER*/
 	.left-container {
 		display: flex;
 		flex-direction: row;
 		justify-content: center;
-		padding: 0.5em;
+		height: 9%;
+		padding: 5px;
+		margin: 0;
 		width: auto;
 	}
+
 	.icon {
 		margin: 0px 5px 0px 20px;
 	}
+
+	/* CENTER CONTAINER */
 	.center-container,
 	.right-container {
 		border-left: none;
@@ -234,53 +311,125 @@ h4 {
 	}
 
 	.center-container {
-		height: 82vh;
+		height: 85%;
 	}
+
 	.center-top-container {
-		flex-direction: row;
-		height: 35vh;
+		justify-content: space-evenly;
+		height: 53%;
+		margin: 0;
 	}
+
 	h1 {
 		display: none;
 	}
+
+	/* STEP CARD */
 	.step-card,
 	.hydration-card {
-		width: 45vw;
-		height: 30vh;
+		width: 95%;
+	}
+
+	.step-card {
+		flex-direction: row;
+		height: 26%;
+	}
+
+	.step-announcements {
+		flex-direction: row;
+		width: 80%;
+		height: auto;
+		margin: 5px;
+	}
+
+	.step-info {
+		display: flex;
+		flex-direction: column;
+		padding: 3px;
+	}
+
+	/* HYDRATION CARD */
+	.hydration-card {
+		justify-content: space-between;
+		padding: 5px;
+		height: 58%;
+	}
+
+	.hyration-card-info {
+		align-items: flex-start;
+		height: 25%;
+		width: 100%;
+	}
+
+	.hyration-data {
+		text-align: center;
+		width: 100%;
+		margin-top: 6px;
+	}
+
+	.bar-chart-horizontal {
+		align-self: center;
+		height: 150px;
+		width: 300px;
+		padding: 5px;
+		margin: 5px;
+		margin-top: -28px;
+	}
+
+	/* SLEEP CARD */
+	.sleep-card {
+		flex-direction: column;
+		height: 45%;
 		margin: 0;
 	}
-	.step-announcements {
-	}
-	.sleep-card {
-	}
+
 	.sleep-announcements {
+		order: -1;
+		height: 35%;
+		width: 75%;
+		align-self: center;
+		margin: -75px -50px 0px 0px;
 	}
-	section > div > article {
-		border: 0.05em solid black;
-		border-radius: 8px;
-		width: 12%;
+
+	.bar-chart-grouped {
+		align-self: center;
+		height: 150px;
+		width: 300px;
+		padding: 5px;
+		margin: 5px;
 	}
-	.today-card {
+
+	.today-card-info,
+	.user-avg-sleep-info {
 		margin: auto;
 		height: 100%;
 		width: 60%;
 	}
+
+	section > section > img {
+		order: -1;
+	}
+
+	/* RIGHT CONTAINER now TOP CONTAINER*/
 	.right-container {
 		height: 9vh;
 	}
+
 	.name-avatar {
 		flex-direction: row;
 	}
+
 	.user-icon {
 		height: auto;
 		width: 10vw;
 	}
+
 	h4 {
 		font-size: 1.5em;
 	}
+
+	/* FRIEND CARD */
 	.friend-card {
 		display: none;
 	}
 }
-
-/*  */
