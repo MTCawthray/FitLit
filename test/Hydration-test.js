@@ -4,7 +4,6 @@ import Hydration from '../src/Hydration';
 const sampleHydrationData = require('../src/data/sample-hydration');
 
 describe('Hydration', () => {
-
   let hydrationRepo, userHydration;
 
   beforeEach(() => {
@@ -27,19 +26,16 @@ describe('Hydration', () => {
   });
 
   describe('calculateAvgOunces()', () => {
-
     it('should be a function', () => {
       expect(userHydration.calculateAvgOunces).to.be.a('function');
     });
 
     it('should calculate the average number of ounces for a user', () => {
-    expect(userHydration.calculateAvgOunces()).to.equal(62);
+      expect(userHydration.calculateAvgOunces()).to.equal(62);
     });
-
   });
 
   describe('findOuncesByDate()', () => {
-
     it('should be a function', () => {
       expect(userHydration.findOuncesByDate).to.be.a('function');
     });
@@ -47,11 +43,9 @@ describe('Hydration', () => {
     it('should return number of ounces for a specified user on a specified date', () => {
       expect(userHydration.findOuncesByDate()).to.equal(56);
     });
-
   });
 
   describe('findWeeklyOunces()', () => {
-
     it('should be a function', () => {
       expect(userHydration.findWeeklyOunces).to.be.a('function');
     });
@@ -60,7 +54,5 @@ describe('Hydration', () => {
       expect(userHydration.findWeeklyOunces().length).to.equal(7);
       expect(userHydration.findWeeklyOunces()).to.deep.equal([58, 44, 33, 67, 27, 70, 56]);
     });
-
   });
-
 });

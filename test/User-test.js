@@ -26,37 +26,30 @@ describe('User', () => {
 
   it('should hold the user\'s address', () => {
     expect(user1.address).to.equal('30086 Kathryn Port, Ciceroland NE 07273');
-
     expect(user2.address).to.equal('85823 Bosco Fork, East Oscarstad MI 85126-5660');
   });
 
   it('should hold the user\'s email', () => {
     expect(user1.email).to.equal('Dimitri.Bechtelar11@gmail.com');
-
     expect(user2.email).to.equal('Elwin.Tromp@yahoo.com');
   });
 
   it('should hold the user\'s stride length', () => {
     expect(user1.strideLength).to.equal(4.5);
-
     expect(user2.strideLength).to.equal(4.4);
   });
 
   it('should hold the user\'s daily step goal', () => {
     expect(user1.dailyStepGoal).to.equal(5000);
-
     expect(user2.dailyStepGoal).to.equal(5000);
   });
 
   it('should hold the user\'s friends', () => {
     expect(user1.friends).to.deep.equal([9, 18, 24, 19]);
-
     expect(user2.friends).to.deep.equal([19, 11, 42, 33]);
-
   });
 
   describe('findFirstName()', () => {
-
     it('should be a function', () => {
       expect(user1.findFirstName).to.be.a('function');
     });
@@ -64,8 +57,6 @@ describe('User', () => {
     it('should return the first name of a user', () => {
       expect(user1.findFirstName()).to.equal('Jarvis');
       expect(user2.findFirstName()).to.equal('Herminia');
-    })
-
-  })
-
+    });
+  });
 });

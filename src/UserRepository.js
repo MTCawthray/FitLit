@@ -14,7 +14,6 @@ class UserRepository {
     }, 0)
     return Math.round(userAvg / this.data.length);
   }
-
 }
 
 export default UserRepository;

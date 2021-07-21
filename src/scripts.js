@@ -11,7 +11,6 @@ import HydrationRepository from './HydrationRepository';
 import Hydration from './Hydration';
 import SleepRepository from './SleepRepository';
 import Sleep from './Sleep';
-// import chart from 'chart.js/auto'; //We are working on how to pass our weeklyOuncesData to this file..
 import domUpdates from '../src/DOM-Manipulation';
 import apiCalls from '../src/data/apiCalls';
 
@@ -23,7 +22,6 @@ window.addEventListener('load', () => {
 });
 
 //---page load functions---//
-
 function loadApiCalls() {
 	apiCalls.getData().then((promise) => {
 		let userData = promise[0].userData;
@@ -81,13 +79,12 @@ function displayTodaysOunces() {
 	domUpdates.renderTodaysOunces(ounces);
 }
 
-function displayWeeklyOunces(chart) {
+function displayWeeklyOunces() {
 	const weeklyOuncesData = getWeeklyOunces();
 	domUpdates.renderWeeklyOunces(weeklyOuncesData);
 }
 
 // sleep
-
 function displayTodaysSleepCard() {
 	const hoursSlept = getHoursSlept();
 	const sleepQuality = getSleepQuality();
@@ -107,8 +104,7 @@ function displayUserAvgSleepInfo() {
 }
 
 //---helper functions----//
-
-// user functions
+// user
 function getName(user) {
 	return user.name;
 }
@@ -136,12 +132,7 @@ function getFirstName(user) {
 	return user.findFirstName();
 }
 
-// **being handled by method in displayStepAnnouncements
-// function getAvgStepGoal(allUsers) {
-// 	return allUsers.findAvgStepGoal();
-// }
-
-// hydration functions
+// hydration
 function getTodaysOunces() {
 	return userHydration.findOuncesByDate();
 }
@@ -150,8 +141,7 @@ function getWeeklyOunces() {
 	return userHydration.findWeeklyOunces();
 }
 
-// sleep functions
-
+// sleep
 function getHoursSlept() {
 	return userSleep.findHours();
 }
@@ -175,5 +165,3 @@ function getAvgHours() {
 function getAvgQuality() {
 	return userSleep.calculateAvgQuality();
 }
-
-//
