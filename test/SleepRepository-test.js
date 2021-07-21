@@ -50,7 +50,6 @@ describe('SleepRepository', () => {
 					sleepQuality: 3.7,
 				},
 			];
-
 			expect(sleepRepo.findDate('2019/06/28')).to.deep.equal(foundDate);
 		});
 	});
